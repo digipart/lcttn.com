@@ -1,0 +1,287 @@
+const fr = {
+  "nav": {
+    "home": "Accueil",
+    "expertise": "Savoir-Faire",
+    "production": "Production",
+    "commitments": "Engagements",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Partenaire Industriel",
+    "titleHighlight": "de Référence",
+    "subtitle": "Confection textile haut et moyen gamme pour les marques européennes",
+    "stat1": "Ans d'expertise",
+    "stat2": "Pièces/an",
+    "stat3": "Experts",
+    "cta1": "Découvrir nos services",
+    "cta2": "Nous contacter",
+    "scroll": "Scroll"
+  },
+  "partners": {
+    "title": "Ils nous",
+    "titleItalic": "font confiance"
+  },
+  "organization": {
+    "title": "Notre Organisation Industrielle",
+    "tunisia": {
+      "title": "Tunisie – Hub Industriel",
+      "stats": "3 sites de production | 16 138 m² | 1350 collaborateurs qualifiés",
+      "items": [
+        "1121 machines industrielles",
+        "Capacité: 3,5M pièces/an",
+        "Spécialisation par usine (structuré / flexible / réactif)",
+        "Optimisation des coûts"
+      ]
+    },
+    "france": {
+      "title": "France – Bureau Paris",
+      "stats": "Développement commercial | Suivi technique | Relation client",
+      "items": [
+        "Showroom permanent",
+        "Équipe commerciale dédiée",
+        "Suivi des collections en temps réel",
+        "Proximité avec les donneurs d'ordre"
+      ]
+    },
+    "turkey": {
+      "title": "Turquie – Bureau Istanbul",
+      "stats": "Sourcing matières | Optimisation supply chain",
+      "items": [
+        "Accès aux meilleurs fournisseurs textiles",
+        "Négociation des prix matières",
+        "Contrôle qualité des tissus"
+      ]
+    }
+  },
+  "advantages": {
+    "title": "Avantages Compétitifs",
+    "proximity": {
+      "title": "Proximité géographique",
+      "description": "2 jours de transport maritime | Procédures douanières simplifiées | Réactivité logistique"
+    },
+    "workforce": {
+      "title": "Main-d'œuvre qualifiée et expérimentée",
+      "description": "Grande disponibilité de talents techniques | Coûts compétitifs | Expertise industrielle reconnue"
+    },
+    "flexibility": {
+      "title": "Flexibilité industrielle et scalabilité",
+      "description": "Capacité d'adaptation aux besoins du marché | Infrastructure robuste pour la croissance | Solutions sur mesure"
+    }
+  },
+  "expertise": {
+    "title": "LCT -",
+    "titleHighlight": "30 Ans d'Expertise Industrielle",
+    "description": "Depuis 1995, LCT s'impose comme un partenaire industriel de référence, alliant savoir-faire traditionnel et innovation technologique.",
+    "installations": {
+      "title": "Installations Industrielles",
+      "description": "Plus de 16 000 m² dédiés à la production."
+    },
+    "workforce": {
+      "title": "Expertise Humaine Qualifiée",
+      "description": "1 350 professionnels engagés dans l'excellence industrielle."
+    },
+    "capacity": {
+      "title": "Capacité de Production Annuelle Élevée",
+      "description": "Jusqu'à 3,5 millions de pièces produites chaque année."
+    },
+    "partners": {
+      "title": "Partenaire Stratégique des Leaders",
+      "description": "Collaborations privilégiées avec les grandes marques européennes."
+    }
+  },
+  "productKnowHow": {
+    "title": "Notre",
+    "titleItalic": "Différence Compétitive",
+    "lct": {
+      "title": "LCT",
+      "items": [
+        "Triple implantation stratégique (Tunisie/France/Turquie)",
+        "Bureau commercial à Paris pour suivi client direct",
+        "Chemises & Blouses",
+        "Sourcing optimisé via Istanbul",
+        "3 usines spécialisées par type de produit",
+        "Certifications internationales complètes (ICS, SMETA, OCS, RCS, ISO 28000)",
+        "Investissement continu (centrale solaire 2026-2027)",
+        "Partenaire des leaders européens depuis 30 ans"
+      ]
+    },
+    "standard": {
+      "title": "Confectionneurs standards",
+      "items": [
+        "Implantation locale uniquement",
+        "Relation commerciale à distance",
+        "Sourcing limité",
+        "Production généraliste",
+        "Certifications basiques",
+        "Infrastructure vieillissante",
+        "Clients locaux ou régionaux"
+      ],
+      "badge": "LCT combine proximité méditerranéenne, expertise industrielle et vision européenne"
+    }
+  },
+  "valueChain": {
+    "title": "Chaîne de",
+    "titleItalic": "Valeur",
+    "description": "Un accompagnement complet de l'idée au produit fini.",
+    "steps": {
+      "step1": {
+        "title": "Développement & Prototypage",
+        "description": "Concevez vos collections avec 60 échantillons par semaine, garantissant une réactivité maximale."
+      },
+      "step2": {
+        "title": "Industrialisation",
+        "description": "Transformez vos prototypes en production à grande échelle grâce à nos processus optimisés."
+      },
+      "step3": {
+        "title": "Production multi-lignes",
+        "description": "Atteignez une capacité de 3,5 millions de pièces par an avec nos lignes performantes."
+      },
+      "step4": {
+        "title": "Contrôle qualité",
+        "description": "Assurez la conformité avec nos 12 inspecteurs qualité dédiés à l'excellence."
+      },
+      "step5": {
+        "title": "Logistique",
+        "description": "Bénéficiez d'une livraison rapide en Europe en 2 à 3 jours via notre chaîne optimisée."
+      }
+    }
+  },
+  "capacity": {
+    "title": "Capacités",
+    "titleItalic": "Industrielles",
+    "badge": "Années d'Excellence",
+    "factory1": {
+      "name": "Usine 1",
+      "year": "Établie en 1995",
+      "description": "Spécialisée dans les produits structurés, notre première usine garantit robustesse et précision."
+    },
+    "factory2": {
+      "name": "Usine 2",
+      "year": "Établie en 2019",
+      "description": "Dédiée à la production flexible, cette usine s'adapte rapidement aux demandes variées du marché."
+    },
+    "factory3": {
+      "name": "Usine 3",
+      "year": "Établie en 2022",
+      "description": "Notre usine la plus récente, optimisée pour la réactivité, assure des délais de livraison très courts."
+    }
+  },
+  "certifications": {
+    "title": "Conformité &",
+    "titleItalic": "Certifications",
+    "lead": "LCT garantit une conformité totale aux standards internationaux.",
+    "guarantee": {
+      "title": "Garantie de Conformité",
+      "description": "LCT garantit une conformité totale aux standards internationaux, avec des certifications reconnues et un engagement continu en matière de responsabilité sociale et environnementale."
+    },
+    "ics": {
+      "label": "ICS & SMETA",
+      "description": "Conditions de travail éthiques."
+    },
+    "iso28000": {
+      "label": "ISO 28000",
+      "description": "Sécurité de la chaîne logistique."
+    },
+    "ocs": {
+      "label": "OCS & RCS",
+      "description": "Coton bio & Matériaux recyclés."
+    },
+    "higg": {
+      "label": "Higg Index",
+      "description": "Évaluation environnementale."
+    },
+    "roadmap": {
+      "title": "Feuille de Route",
+      "step1": {
+        "year": "2026",
+        "title": "ISO 45001",
+        "description1": "Santé et sécurité au travail.",
+        "description2": "Installation d'une centrale solaire pour -70% d'empreinte carbone et obtention de la certification ISO 14001 (gestion environnementale)."
+      },
+      "step2": {
+        "year": "2026-27",
+        "title": "Solaire & ISO 14001",
+        "description1": "-70% d'empreinte carbone.",
+        "description2": "Certification ISO 45001 (santé et sécurité au travail) pour renforcer notre engagement envers nos employés."
+      }
+    }
+  },
+  "whyChoose": {
+    "eyebrow": "Engagement & Excellence",
+    "title": "Pourquoi Nous",
+    "titleItalic": "Choisir",
+    "performance": {
+      "title": "Performance & Réactivité",
+      "items": [
+        "3 sites spécialisés — Multi-lignes",
+        "Éch. 2j — Production 3 semaines",
+        "Proximité Europe (Tunisie — 2-3j)",
+        "Bureau Paris — Suivi en temps réel",
+        "Flexibilité 5k à 500k pièces"
+      ]
+    },
+    "reliability": {
+      "title": "Fiabilité & Expertise",
+      "items": [
+        "30 ans d'expérience (est. 1995)",
+        "Partner: Zara, Mango, Diesel...",
+        "Qualité certifiée >98% conformité",
+        "Certifications internationales complètes",
+        "R&D Durable & Green Innovation"
+      ]
+    }
+  },
+  "contact": {
+    "title": "Prendre",
+    "titleItalic": "Contact",
+    "lead": "Une question ? Un projet ? Nos équipes sont à votre écoute pour vous accompagner dans votre développement industriel.",
+    "infoTitle": "Informations de Contact",
+    "address": {
+      "label": "Siège Social & Production",
+      "value": "ROUTE DE SFAX KM5 KSIBET 4041 – TUNISIE (SOUSSE)"
+    },
+    "phone": {
+      "label": "Bureau Commercial",
+      "value": "+33 6 17 81 76 78"
+    },
+    "email": {
+      "label": "Email",
+      "value": "info@lcttn.com"
+    },
+    "brand": "LCT — Partenaire de confiance pour le prêt-à-porter haut de gamme depuis 1995.",
+    "formTitle": "Envoyez-nous un message",
+    "form": {
+      "name": "Votre Nom",
+      "email": "Votre Email",
+      "message": "Votre Message",
+      "submit": "Envoyer le message"
+    }
+  },
+  "footer": {
+    "brand": "LCT",
+    "description": "La Confection Tunisienne — Partenaire industriel de référence depuis 1995, spécialisé dans le prêt-à-porter haut de gamme pour les leaders européens.",
+    "tag": "Industrial Apparel Manufacturing",
+    "navigation": "Navigation",
+    "legal": "Légal",
+    "locations": "Emplacements",
+    "links": {
+      "expertise": "Expertise",
+      "production": "Production",
+      "values": "Valeurs",
+      "contact": "Contact",
+      "legal": "Mentions Légales",
+      "privacy": "Confidentialité",
+      "cookies": "Cookies"
+    },
+    "location1": {
+      "city": "Sousse, Tunisie",
+      "description": "Usines & Siège Social"
+    },
+    "location2": {
+      "city": "Paris, France",
+      "description": "Bureau Commercial"
+    },
+    "copyright": "Tous droits réservés."
+  }
+};
+export default fr;
