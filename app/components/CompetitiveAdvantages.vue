@@ -1,259 +1,245 @@
 <template>
-  <section class="competitive-advantages-section">
+  <section class="advantages-section">
+    <!-- Restored Background with Overlay -->
+    <div class="background-overlay"></div>
+    
     <div class="container">
       <!-- Section Header -->
       <div class="section-header">
-        <h2 class="section-title">Avantages Compétitifs</h2>
+        <h2 class="section-title">
+          {{ $t('advantages.title') }}
+        </h2>
         <div class="title-underline"></div>
       </div>
 
-      <!-- Advantages Grid -->
       <div class="advantages-grid">
         <!-- Proximité géographique -->
         <div class="advantage-card">
-          <div class="card-number">01</div>
-          <h3 class="card-title">Proximité géographique</h3>
-          <div class="card-description">
-            <p>2 jours de transport maritime | Procédures douanières simplifiées | Réactivité logistique</p>
+          <div class="card-glow"></div>
+          <div class="icon-box">
+            <Icon name="lucide:ship" class="adv-icon" />
           </div>
+          <h3 class="card-title">
+            {{ $t('advantages.proximity.title') }}
+          </h3>
+          <div class="card-description">
+            <p>{{ $t('advantages.proximity.description') }}</p>
+          </div>
+          <div class="card-footer-decor"></div>
         </div>
 
         <!-- Main-d'œuvre qualifiée -->
-        <div class="advantage-card">
-          <div class="card-number">02</div>
-          <h3 class="card-title">Main-d'œuvre qualifiée et expérimentée</h3>
-          <div class="card-description">
-            <p>Grande disponibilité de talents techniques | Coûts compétitifs | Expertise industrielle reconnue</p>
+        <div class="advantage-card highlighted">
+          <div class="card-glow"></div>
+          <div class="icon-box">
+            <Icon name="lucide:graduation-cap" class="adv-icon" />
           </div>
+          <h3 class="card-title">
+            {{ $t('advantages.workforce.title') }}
+          </h3>
+          <div class="card-description">
+            <p>{{ $t('advantages.workforce.description') }}</p>
+          </div>
+          <div class="card-footer-decor"></div>
         </div>
 
         <!-- Flexibilité industrielle -->
         <div class="advantage-card">
-          <div class="card-number">03</div>
-          <h3 class="card-title">Flexibilité industrielle et scalabilité</h3>
-          <div class="card-description">
-            <p>Capacité d'adaptation aux besoins du marché | Infrastructure robuste pour la croissance | Solutions sur mesure</p>
+          <div class="card-glow"></div>
+          <div class="icon-box">
+            <Icon name="lucide:zap" class="adv-icon" />
           </div>
+          <h3 class="card-title">
+            {{ $t('advantages.flexibility.title') }}
+          </h3>
+          <div class="card-description">
+            <p>{{ $t('advantages.flexibility.description') }}</p>
+          </div>
+          <div class="card-footer-decor"></div>
         </div>
       </div>
     </div>
   </section>
 </template>
 
-<script setup lang="ts">
-// CompetitiveAdvantages component - Premium design
-</script>
-
 <style scoped>
-.competitive-advantages-section {
-  padding: 120px 0;
-  background-image: url('/images/img_port.jpg');
+.advantages-section {
+  padding: 140px 0;
+  background-image: url('/images/img_port.jpg'); /* Restore your background image */
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
   position: relative;
+  overflow: hidden;
 }
 
-.competitive-advantages-section::before {
-  content: '';
+.background-overlay {
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(255, 255, 255, 0.5);
+  inset: 0;
+  background: rgba(0, 0, 0, 0.60); /* Clean white/light overlay */
   z-index: 0;
 }
 
 .container {
-  max-width: 1400px;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 0 60px;
+  padding: 0 20px;
   position: relative;
   z-index: 1;
 }
 
-/* Section Header */
+/* Header */
 .section-header {
   text-align: center;
-  margin-bottom: 100px;
+  margin-bottom: 80px;
+}
+
+.section-badge {
+  display: inline-block;
+  padding: 6px 18px;
+  background: rgba(0, 0, 0, 0.05); /* Changed gold to black clear */
+  color: #1a1a1a;
+  border-radius: 100px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
 }
 
 .section-title {
-  font-family: 'scotch-display', serif;
-  font-size: clamp(2.5rem, 4vw, 4rem);
-  font-weight: 400;
-  color: #1a1a1a;
-  letter-spacing: -0.02em;
-  margin-bottom: 30px;
-  line-height: 1.2;
+  font-size: clamp(2.2rem, 5vw, 3.2rem);
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 20px;
+  letter-spacing: -0.03em;
 }
 
 .title-underline {
-  width: 60px;
-  height: 1px;
-  background: #1a1a1a;
+  width: 50px;
+  height: 4px;
+  background: #fff; /* Changed gold to black */
   margin: 0 auto;
 }
 
-/* Advantages Grid */
+/* Grid */
 .advantages-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 60px;
+  gap: 32px;
 }
 
-/* Advantage Cards */
+/* Cards */
 .advantage-card {
-  background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(10px);
-  padding: 50px 40px;
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  border: 1px solid rgba(232, 232, 232, 0.8);
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(12px);
+  padding: 60px 40px;
+  border-radius: 32px;
   position: relative;
+  overflow: hidden;
+  transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
-.advantage-card::before {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background: #1a1a1a;
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.advantage-card:hover::before {
-  transform: scaleX(1);
+.advantage-card.highlighted {
+  background: #ffffff;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.05);
+  transform: scale(1.02);
 }
 
 .advantage-card:hover {
-  background: rgba(255, 255, 255, 1);
+  transform: translateY(-15px) scale(1.02);
   border-color: #1a1a1a;
-  transform: translateY(-8px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 40px 80px rgba(0, 0, 0, 0.12);
+  background: #ffffff;
 }
 
-/* Card Number */
-.card-number {
-  font-family: 'scotch-display', serif;
-  font-size: 3rem;
-  font-weight: 300;
-  color: #e0e0e0;
-  line-height: 1;
-  margin-bottom: 30px;
-  transition: all 0.4s ease;
+.card-glow {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 0%, rgba(0, 0, 0, 0.03), transparent 70%);
+  opacity: 0;
+  transition: opacity 0.5s ease;
 }
 
-.advantage-card:hover .card-number {
+.advantage-card:hover .card-glow {
+  opacity: 1;
+}
+
+/* Icons */
+.icon-box {
+  width: 72px;
+  height: 72px;
+  background: #f0f0f0;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 35px;
+  transition: all 0.5s ease;
+  position: relative;
+  z-index: 2;
+}
+
+.adv-icon {
+  font-size: 28px;
   color: #1a1a1a;
-  transform: scale(1.1);
+  transition: all 0.5s ease;
 }
 
-/* Card Title */
+.advantage-card:hover .icon-box {
+  background: #1a1a1a;
+  transform: rotateY(180deg);
+}
+
+.advantage-card:hover .adv-icon {
+  color: #ffffff;
+  transform: rotateY(-180deg);
+}
+
+/* Content */
 .card-title {
-  font-family: 'scotch-display', serif;
-  font-size: 1.5rem;
-  font-weight: 400;
+  font-size: 1.35rem;
+  font-weight: 700;
   color: #1a1a1a;
-  letter-spacing: -0.01em;
-  line-height: 1.4;
-  margin-bottom: 25px;
-  min-height: 60px;
+  margin-bottom: 20px;
+  line-height: 1.3;
+  position: relative;
+  z-index: 2;
 }
 
-/* Card Description */
 .card-description {
-  padding-top: 25px;
-  border-top: 1px solid #e0e0e0;
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.8;
+  position: relative;
+  z-index: 2;
 }
 
-.card-description p {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 0.85rem;
-  color: #666;
-  line-height: 1.9;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
+.card-footer-decor {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(135deg, transparent 50%, rgba(0, 0, 0, 0.03) 50%);
+  border-radius: 0 0 32px 0;
 }
 
-/* Responsive Design */
-@media (max-width: 1200px) {
-  .container {
-    padding: 0 40px;
-  }
-
-  .advantages-grid {
-    gap: 40px;
-  }
+/* Responsive */
+@media (max-width: 1024px) {
+  .advantages-grid { grid-template-columns: repeat(2, 1fr); }
+  .advantage-card.highlighted { transform: scale(1); }
 }
 
-@media (max-width: 968px) {
-  .competitive-advantages-section {
-    padding: 80px 0;
-    background-attachment: scroll;
-  }
-
-  .container {
-    padding: 0 30px;
-  }
-
-  .section-header {
-    margin-bottom: 60px;
-  }
-
-  .advantages-grid {
-    grid-template-columns: 1fr;
-    gap: 50px;
-  }
-
-  .advantage-card {
-    padding: 40px 35px;
-  }
-
-  .card-title {
-    min-height: auto;
-  }
-}
-
-@media (max-width: 640px) {
-  .competitive-advantages-section {
-    padding: 60px 0;
-  }
-
-  .competitive-advantages-section::before {
-    background: rgba(255, 255, 255, 0.95);
-  }
-
-  .container {
-    padding: 0 24px;
-  }
-
-  .section-title {
-    font-size: 2rem;
-  }
-
-  .section-header {
-    margin-bottom: 50px;
-  }
-
-  .advantage-card {
-    padding: 35px 25px;
-  }
-
-  .card-number {
-    font-size: 2.5rem;
-  }
-
-  .card-title {
-    font-size: 1.25rem;
-  }
-
-  .card-description p {
-    font-size: 0.8rem;
-  }
+@media (max-width: 768px) {
+  .advantages-section { padding: 100px 0; }
+  .advantages-grid { grid-template-columns: 1fr; }
+  .advantage-card { padding: 50px 30px; }
+  .section-title { font-size: 2.2rem; }
 }
 </style>

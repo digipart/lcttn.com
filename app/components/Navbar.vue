@@ -1,440 +1,362 @@
-<template>
-  <nav class="nav-outer" :class="{ 'nav-scrolled': isScrolled, 'nav-menu-open': isMenuOpen }">
-    <div class="container">
-      <div class="nav-content">
-        
-        <!-- Logo -->
-        <div class="nav-logo">
-          <NuxtLink :to="localePath('/')" class="logo-link">
-            <span>LCT</span>
-          </NuxtLink>
-        </div>
-        <!-- Desktop Navigation -->
-        <div class="nav-desktop">
-          <ul class="nav-links">
-            <li><a href="#hero" class="nav-link">{{ $t('nav.home') }}</a></li>
-            <li><a href="#expertise" class="nav-link">{{ $t('nav.expertise') }}</a></li>
-            <li><a href="#production" class="nav-link">{{ $t('nav.production') }}</a></li>
-            <li><a href="#engagements" class="nav-link">{{ $t('nav.commitments') }}</a></li>
-            <li><a href="#contact" class="nav-link nav-btn">{{ $t('nav.contact') }}</a></li>
-          </ul>
-          <!-- Language Switcher -->
-          <div class="lang-switcher">
-            <button 
-              v-for="locale in availableLocales" 
-              :key="locale.code"
-              @click="switchLanguage(locale.code)"
-              :class="['lang-btn', { active: currentLocale === locale.code }]"
-            >
-              <!-- {{ locale.code.toUpperCase() }} -->
-            </button>
-          </div>
-        </div>
-        <!-- Mobile Toggle -->
-        <button class="nav-mobile-toggle" @click="toggleMenu" aria-label="Toggle Menu">
-          <div class="burger">
-            <span class="line line-1"></span>
-            <span class="line line-2"></span>
-          </div>
-        </button>
-      </div>
-    </div>
-    <!-- Mobile Navigation Overlay -->
-    <transition name="fade">
-      <div v-if="isMenuOpen" class="mobile-overlay" @click="closeMenu"></div>
-    </transition>
-    
-    <transition name="slide">
-      <div v-if="isMenuOpen" class="mobile-drawer">
-        <div class="drawer-header">
-          <span class="drawer-logo">LCT</span>
-          <button class="close-btn" @click="closeMenu">&times;</button>
-        </div>
-        <ul class="drawer-links">
-          <li><a href="#hero" @click="closeMenu">{{ $t('nav.home') }}</a></li>
-          <li><a href="#expertise" @click="closeMenu">{{ $t('nav.expertise') }}</a></li>
-          <li><a href="#production" @click="closeMenu">{{ $t('nav.production') }}</a></li>
-          <li><a href="#engagements" @click="closeMenu">{{ $t('nav.commitments') }}</a></li>
-          <li><a href="#contact" @click="closeMenu" class="mobile-btn">{{ $t('nav.contact') }}</a></li>
-        </ul>
-        <!-- Mobile Language Switcher -->
-        <div class="mobile-lang-switcher">
-          <button 
-            v-for="locale in availableLocales" 
-            :key="locale.code"
-            @click="switchLanguage(locale.code)"
-            :class="['lang-btn-mobile', { active: currentLocale === locale.code }]"
-          >
-            <!-- {{ locale.code.toUpperCase() }} -->
-          </button>
-        </div>
-        <div class="drawer-footer">
-          <p>LCT — Partenaire de référence depuis 1995</p>
-        </div>
-      </div>
-    </transition>
-  </nav>
-</template>
 <script setup lang="ts">
-import { ref, onMounted, onUnmounted, computed } from 'vue'
-import { useI18n } from '#imports'
+import { ref, onMounted, onUnmounted } from 'vue'
+import { useI18n } from 'vue-i18n'
 
-const { locale, locales, setLocale } = useI18n()
-const localePath = useLocalePath()
-
+const { locale, locales } = useI18n()
 const isScrolled = ref(false)
-const isMenuOpen = ref(false)
+const isMobileMenuOpen = ref(false)
 
-const currentLocale = computed(() => locale.value)
-const availableLocales = computed(() => locales.value)
-
-const switchLanguage = async (langCode: string) => {
-  await setLocale(langCode)
-  closeMenu()
-}
-
+// Handle scroll for navbar transparency
 const handleScroll = () => {
   isScrolled.value = window.scrollY > 50
 }
 
-const toggleMenu = () => {
-  isMenuOpen.value = !isMenuOpen.value
-  if (isMenuOpen.value) {
-    document.body.style.overflow = 'hidden'
-  } else {
-    document.body.style.overflow = ''
-  }
-}
-
-const closeMenu = () => {
-  isMenuOpen.value = false
-  document.body.style.overflow = ''
+const switchLanguage = (code: string) => {
+  locale.value = code
+  isMobileMenuOpen.value = false
 }
 
 onMounted(() => {
   window.addEventListener('scroll', handleScroll)
-  handleScroll() // Initial check
 })
 
 onUnmounted(() => {
   window.removeEventListener('scroll', handleScroll)
 })
+
+const navLinks = [
+  { name: 'nav.home', href: '#' },
+  { name: 'nav.expertise', href: '#expertise' },
+  { name: 'nav.organization', href: '#organization' },
+]
 </script>
+
+<template>
+  <nav :class="['navbar', { 'navbar-scrolled': isScrolled }]">
+    <div class="container navbar-container">
+      <!-- Logo -->
+      <div class="navbar-brand">
+        <a href="/" class="logo">
+          <span class="logo-text">LCT</span>
+          <span class="logo-dot"></span>
+        </a>
+      </div>
+
+      <!-- Desktop Navigation -->
+      <div class="navbar-menu-desktop">
+        <ul class="nav-list">
+          <li v-for="link in navLinks" :key="link.name">
+            <a :href="link.href" class="nav-link">{{ $t(link.name) }}</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Desktop Right (Lang + Action) -->
+      <div class="navbar-actions">
+        <div class="lang-switcher">
+          <button 
+            v-for="loc in locales" 
+            :key="typeof loc === 'string' ? loc : loc.code"
+            @click="switchLanguage(typeof loc === 'string' ? loc : loc.code)"
+            :class="['lang-btn', { active: locale === (typeof loc === 'string' ? loc : loc.code) }]"
+          >
+            {{ (typeof loc === 'string' ? loc : loc.code).toUpperCase() }}
+          </button>
+        </div>
+        
+        <a href="#contact" class="btn-quote">
+          {{ $t('nav.contact') || 'Contact' }}
+        </a>
+
+        <!-- Mobile Toggle -->
+        <button class="mobile-toggle" @click="isMobileMenuOpen = !isMobileMenuOpen">
+          <span class="burger-bar" :class="{ 'open': isMobileMenuOpen }"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <Transition name="slide">
+      <div v-if="isMobileMenuOpen" class="mobile-drawer">
+        <div class="drawer-header">
+          <span class="logo-text">LCT</span>
+          <button class="close-btn" @click="isMobileMenuOpen = false">
+             <Icon name="lucide:x" />
+          </button>
+        </div>
+        <ul class="mobile-nav-list">
+          <li v-for="link in navLinks" :key="link.name">
+            <a :href="link.href" class="mobile-nav-link" @click="isMobileMenuOpen = false">
+              {{ $t(link.name) }}
+            </a>
+          </li>
+        </ul>
+        <div class="mobile-drawer-footer">
+          <div class="mobile-lang">
+            <button 
+              v-for="loc in locales" 
+              :key="typeof loc === 'string' ? loc : loc.code"
+              @click="switchLanguage(typeof loc === 'string' ? loc : loc.code)"
+              :class="['lang-btn-mob', { active: locale === (typeof loc === 'string' ? loc : loc.code) }]"
+            >
+              {{ (typeof loc === 'string' ? loc : loc.code).toUpperCase() }}
+            </button>
+          </div>
+        </div>
+      </div>
+    </Transition>
+  </nav>
+</template>
+
 <style scoped>
-nav,
-.nav-outer {
+.navbar {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
+  height: 90px;
   z-index: 1000;
-  transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
-  padding: 30px 50px;
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  display: flex;
+  align-items: center;
+}
+
+.navbar-scrolled {
+  height: 70px;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.03);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.navbar-scrolled .nav-link {
+  color: #1a1a1a;
 }
 .container {
   max-width: 1400px;
   margin: 0 auto;
-  padding: 0 60px;
+  padding: 0 40px;
+  width: 100%;
 }
-/* Scrolled State */
-.nav-outer.nav-scrolled {
-  padding: 15px 0;
-  background: rgba(255, 255, 255, 0.9);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-}
-.nav-content {
+
+.navbar-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-/* Logo */
-.logo-link {
-  font-family: 'scotch-display', serif;
-  font-size: 2rem;
-  font-weight: 300;
-  color: #ffffff;
+
+/* Brand/Logo */
+.logo {
   text-decoration: none;
-  letter-spacing: 2px;
-  transition: color 0.4s ease;
-}
-.nav-scrolled .logo-link {
-  color: #1a1a1a;
-}
-/* Desktop Links */
-.nav-desktop {
-  display: block;
-}
-.nav-links {
   display: flex;
   align-items: center;
-  gap: 50px;
-  list-style: none;
-  margin: 0;
-  padding: 0;
+  gap: 4px;
 }
-.nav-link {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 0.85rem;
-  font-weight: 500;
-  color: rgba(255, 255, 255, 0.8);
-  text-decoration: none;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  position: relative;
-  transition: color 0.4s ease;
-}
-.nav-scrolled .nav-link {
-  color: #666;
-}
-.nav-link:hover {
-  color: #ffffff;
-}
-.nav-scrolled .nav-link:hover {
+
+.logo-text {
+  font-size: 1.8rem;
+  font-weight: 900;
   color: #1a1a1a;
+  letter-spacing: -1px;
 }
+
+.logo-dot {
+  width: 6px;
+  height: 6px;
+  background: #1a1a1a;
+  border-radius: 50%;
+  margin-top: 8px;
+}
+
+/* Desktop Menu */
+.navbar-menu-desktop {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.nav-list {
+  display: flex;
+  gap: 40px;
+  list-style: none;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  position: relative;
+  padding-bottom: 4px;
+}
+
 .nav-link::after {
   content: '';
   position: absolute;
-  bottom: -5px;
-  left: 0;
   width: 0;
-  height: 1px;
-  background: currentColor;
-  transition: width 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #1a1a1a;
+  transition: width 0.3s ease;
 }
+
+.nav-link:hover {
+  color: #1a1a1a;
+}
+
 .nav-link:hover::after {
   width: 100%;
 }
-/* Contact Button Link */
-.nav-btn {
-  background: #ffffff;
-  color: #1a1a1a !important;
-  padding: 12px 25px;
-  border-radius: 0;
-  transition: all 0.4s ease;
+
+/* Actions */
+.navbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 25px;
 }
-.nav-scrolled .nav-btn {
-  background: #1a1a1a;
-  color: #ffffff !important;
-}
-.nav-btn::after {
-  display: none;
-}
-.nav-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-}
-/* Language Switcher */
+
 .lang-switcher {
   display: flex;
-  gap: 8px;
-  margin-left: 30px;
-  padding-left: 30px;
-  border-left: 1px solid rgba(255, 255, 255, 0.2);
+  background: #f4f4f4;
+  padding: 4px;
+  border-radius: 12px;
 }
-.nav-scrolled .lang-switcher {
-  border-left-color: rgba(26, 26, 26, 0.2);
-}
+
 .lang-btn {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 0.75rem;
-  font-weight: 500;
-  color: rgba(255, 255, 255, 0.6);
-  background: transparent;
-  border: 1px solid rgba(255, 255, 255, 0.3);
   padding: 6px 12px;
+  border: none;
+  background: transparent;
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: #888;
   cursor: pointer;
+  border-radius: 8px;
   transition: all 0.3s ease;
-  text-transform: uppercase;
-  letter-spacing: 1px;
 }
-.nav-scrolled .lang-btn {
-  color: #666;
-  border-color: rgba(26, 26, 26, 0.3);
-}
-.lang-btn:hover {
-  color: #ffffff;
-  border-color: rgba(255, 255, 255, 0.6);
-  background: rgba(255, 255, 255, 0.1);
-}
-.nav-scrolled .lang-btn:hover {
-  color: #1a1a1a;
-  border-color: #1a1a1a;
-  background: rgba(26, 26, 26, 0.05);
-}
+
 .lang-btn.active {
-  color: #ffffff;
-  background: rgba(255, 255, 255, 0.2);
-  border-color: rgba(255, 255, 255, 0.6);
-}
-.nav-scrolled .lang-btn.active {
+  background: #fff;
   color: #1a1a1a;
-  background: rgba(26, 26, 26, 0.1);
-  border-color: #1a1a1a;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
 }
+
+.btn-quote {
+  background: #1a1a1a;
+  color: #fff;
+  text-decoration: none;
+  padding: 12px 24px;
+  border-radius: 12px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  transition: all 0.3s ease;
+}
+
+.btn-quote:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
 /* Mobile Toggle */
-.nav-mobile-toggle {
+.mobile-toggle {
   display: none;
   background: none;
   border: none;
   cursor: pointer;
   padding: 10px;
-  z-index: 1001;
 }
-.burger {
+
+.burger-bar {
+  display: block;
   width: 24px;
   height: 2px;
-  background: #ffffff;
-  position: relative;
-  transition: all 0.4s ease;
-}
-.nav-scrolled .burger {
   background: #1a1a1a;
+  position: relative;
+  transition: all 0.3s;
 }
-.burger .line {
+
+.burger-bar::before, .burger-bar::after {
+  content: '';
   position: absolute;
   width: 100%;
   height: 2px;
-  background: inherit;
-  left: 0;
-  transition: all 0.4s ease;
-}
-.line-1 { transform: translateY(-8px); }
-.line-2 { transform: translateY(8px); }
-.nav-menu-open .burger {
-  background: transparent !important;
-}
-.nav-menu-open .line-1 {
-  transform: rotate(45deg);
   background: #1a1a1a;
+  transition: all 0.3s;
 }
-.nav-menu-open .line-2 {
-  transform: rotate(-45deg);
-  background: #1a1a1a;
-}
+
+.burger-bar::before { top: -8px; }
+.burger-bar::after { bottom: -8px; }
+
+.burger-bar.open { background: transparent; }
+.burger-bar.open::before { transform: rotate(45deg); top: 0; }
+.burger-bar.open::after { transform: rotate(-45deg); bottom: 0; }
+
 /* Mobile Drawer */
 .mobile-drawer {
   position: fixed;
-  top: 0;
-  right: 0;
-  width: 100%;
-  height: 100vh;
-  background: #ffffff;
-  z-index: 1000;
-  padding: 100px 40px;
+  inset: 0;
+  background: #fff;
+  z-index: 1100;
+  padding: 40px;
   display: flex;
   flex-direction: column;
 }
+
 .drawer-header {
-  position: absolute;
-  top: 30px;
-  left: 40px;
-  right: 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 60px;
 }
-.drawer-logo {
-  font-family: 'scotch-display', serif;
-  font-size: 2rem;
-  color: #1a1a1a;
-}
-.drawer-links {
+
+.mobile-nav-list {
   list-style: none;
-  padding: 0;
-  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
 }
-.drawer-links li {
-  margin-bottom: 30px;
-}
-.drawer-links a {
-  font-family: 'scotch-display', serif;
-  font-size: 2.5rem;
+
+.mobile-nav-link {
+  font-size: 2rem;
+  font-weight: 800;
   color: #1a1a1a;
   text-decoration: none;
-  font-weight: 300;
 }
-.mobile-btn {
-  display: inline-block;
-  margin-top: 20px;
-  font-family: 'Montserrat', sans-serif !important;
-  font-size: 1rem !important;
-  background: #1a1a1a;
-  color: #ffffff !important;
-  padding: 15px 40px;
-}
-.drawer-footer {
+
+.mobile-drawer-footer {
   margin-top: auto;
+  padding-top: 40px;
   border-top: 1px solid #eee;
-  padding-top: 30px;
 }
-.drawer-footer p {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 0.75rem;
-  color: #999;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-}
-/* Mobile Language Switcher */
-.mobile-lang-switcher {
+
+.mobile-lang {
   display: flex;
-  gap: 15px;
-  margin-top: 30px;
-  padding-top: 30px;
-  border-top: 1px solid #eee;
+  gap: 20px;
 }
-.lang-btn-mobile {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 0.85rem;
-  font-weight: 500;
-  color: #666;
-  background: transparent;
-  border: 1px solid #e0e0e0;
-  padding: 10px 20px;
+
+.lang-btn-mob {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: #ccc;
   cursor: pointer;
-  transition: all 0.3s ease;
-  text-transform: uppercase;
-  letter-spacing: 1px;
 }
-.lang-btn-mobile:hover {
+
+.lang-btn-mob.active {
   color: #1a1a1a;
-  border-color: #1a1a1a;
-  background: rgba(26, 26, 26, 0.05);
 }
-.lang-btn-mobile.active {
-  color: #ffffff;
-  background: #1a1a1a;
-  border-color: #1a1a1a;
-}
-.mobile-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  background: rgba(0,0,0,0.5);
-  z-index: 999;
-}
+
 /* Transitions */
-.fade-enter-active, .fade-leave-active { transition: opacity 0.5s; }
-.fade-enter-from, .fade-leave-to { opacity: 0; }
-.slide-enter-active, .slide-leave-active { transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1); }
+.slide-enter-active, .slide-leave-active { transition: transform 0.5s cubic-bezier(0.8, 0, 0.2, 1); }
 .slide-enter-from, .slide-leave-to { transform: translateX(100%); }
-/* Responsive */
-@media (max-width: 968px) {
-  .nav-desktop {
-    display: none;
-  }
-  .nav-mobile-toggle {
-    display: block;
-  }
-  .container {
-    padding: 0 30px;
-  }
-  .nav-outer {
-    padding: 20px 0;
-  }
+
+@media (max-width: 1024px) {
+  .navbar-menu-desktop { display: none; }
+  .mobile-toggle { display: block; }
+  .navbar-actions .lang-switcher, .navbar-actions .btn-quote { display: none; }
+  .navbar { height: 80px; }
 }
 </style>

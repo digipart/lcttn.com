@@ -3,8 +3,8 @@
     <div class="container">
       <!-- Section Header -->
       <div class="section-header">
-        <h2 class="section-title">Chaîne de <span class="title-italic">Valeur</span></h2>
-        <p class="section-description">Un accompagnement complet de l'idée au produit fini.</p>
+        <h2 class="section-title">{{ $t('valueChain.title') }} <span class="title-titleItalic">{{ $t('valueChain.title') }}</span></h2>
+        <p class="section-description">{{ $t('valueChain.description') }}</p>
       </div>
       <!-- Process Flow -->
       <div class="process-wrapper">
@@ -20,7 +20,7 @@
               
             </div>
             <div class="step-content">
-              <span class="step-label" v-if="index < stepsWithIcons.length - 1">Étape 0{{ index + 1 }}</span>
+              <span class="step-label" v-if="index < stepsWithIcons.length">Étape 0{{ index + 1 }}</span>
               <h3 class="step-title">{{ step.title }}</h3>
               <p class="step-description">
                 {{ step.description }}
@@ -37,31 +37,34 @@
 <script setup lang="ts">
 // ValueChain component with modern black vector icons
 import { computed } from 'vue';
+import { useI18n } from 'vue-i18n'
+
+const { t } = useI18n()
 const valueChainSteps = [
   {
     id: 1,
-    title: 'Développement & Prototypage',
-    description: 'Concevez vos collections avec 60 échantillons par semaine, garantissant une réactivité maximale.'
+    title: t('valueChain.steps.step1.title') ,
+    description: t('valueChain.steps.step1.description')
   },
   {
     id: 2,
-    title: 'Industrialisation',
-    description: 'Transformez vos prototypes en production à grande échelle grâce à nos processus optimisés.'
+    title: t('valueChain.steps.step2.title') ,
+    description: t('valueChain.steps.step2.description')
   },
   {
     id: 3,
-    title: 'Production multi-lignes',
-    description: 'Atteignez une capacité de 3,5 millions de pièces par an avec nos lignes performantes.'
+    title: t('valueChain.steps.step3.title') ,
+    description: t('valueChain.steps.step3.description')
   },
   {
     id: 4,
-    title: 'Contrôle qualité',
-    description: 'Assurez la conformité avec nos 12 inspecteurs qualité dédiés à l\'excellence.'
+    title: t('valueChain.steps.step4.title') ,
+    description: t('valueChain.steps.step4.description')
   },
   {
     id: 5,
-    title: 'Logistique',
-    description: 'Bénéficiez d\'une livraison rapide en Europe en 2 à 3 jours via notre chaîne optimisée.'
+    title: t('valueChain.steps.step5.title') ,
+    description: t('valueChain.steps.step5.description')
   },
 ];
 const icons = [

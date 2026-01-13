@@ -3,7 +3,7 @@
     <div class="container">
       <!-- Section Header -->
       <div class="section-header">
-        <h2 class="section-title">Notre <span class="title-italic">Différence Compétitive</span></h2>
+        <h2 class="section-title">{{ $t('productKnowHow.title') }} <span class="title-italic">{{ $t('productKnowHow.titleItalic') }}</span></h2>
         <div class="title-underline"></div>
       </div>
       <div class="knowhow-grid">
@@ -14,18 +14,18 @@
               <!-- Sewing Machine Vector Icon -->
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="m2 2 20 20"/><path d="M11.85 6.15A2.5 2.5 0 0 0 10 3H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-5"/><path d="M15 11h.01"/><path d="M15 15h.01"/><path d="M19 11h.01"/><path d="M19 15h.01"/><path d="M15 7h.01"/></svg>
             </div>
-            <h3 class="column-title">LCT</h3>
+            <h3 class="column-title">{{ $t('productKnowHow.lct.title') }}</h3>
           </div>
           
           <ul class="knowhow-list">
-            <li><span>Triple implantation stratégique (Tunisie/France/Turquie)</span></li>
-            <li><span>Bureau commercial à Paris pour suivi client direct</span></li>
-            <li><span>Chemises & Blouses</span></li>
-            <li><span>Sourcing optimisé via Istanbul</span></li>
-            <li><span>3 usines spécialisées par type de produit</span></li>
-            <li><span>Certifications internationales complètes (ICS, SMETA, OCS, RCS, ISO 28000)</span></li>
-            <li><span>Investissement continu (centrale solaire 2026-2027)</span></li>
-            <li><span>Partenaire des leaders européens depuis 30 ans</span></li>
+            <li><span>{{ $t('productKnowHow.lct.items[0]') }}</span></li>
+            <li><span>{{ $t('productKnowHow.lct.items[1]') }}</span></li>
+            <li><span>{{ $t('productKnowHow.lct.items[2]') }}</span></li>
+            <li><span>{{ $t('productKnowHow.lct.items[3]') }}</span></li>
+            <li><span>{{ $t('productKnowHow.lct.items[4]') }}</span></li>
+            <li><span>{{ $t('productKnowHow.lct.items[5]') }}</span></li>
+            <li><span>{{ $t('productKnowHow.lct.items[6]') }}</span></li>
+            <li><span>{{ $t('productKnowHow.lct.items[7]') }}</span></li>
           </ul>
         </div>
         <!-- Divider Line -->
@@ -37,22 +37,22 @@
               <!-- Hanger Vector Icon -->
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2V6"/><path d="M12 2C13.1046 2 14 2.89543 14 4C14 5.10457 13.1046 6 12 6C10.8954 6 10 5.10457 10 4C10 3.44772 10.2239 2.94772 10.5858 2.58579"/><path d="M2 19L11.5 13.5C11.8106 13.3225 12.1894 13.3225 12.5 13.5L22 19C22 19.5523 21.5523 20 21 20H3C2.44772 20 2 19.5523 2 19Z"/></svg>
             </div>
-            <h3 class="column-title">Confectionneurs standards</h3>
+            <h3 class="column-title">{{ $t('productKnowHow.standard.title') }}</h3>
           </div>
           
           <ul class="knowhow-list">
-            <li><span>Implantation locale uniquement</span></li>
-            <li><span>Relation commerciale à distance</span></li>
-            <li><span>Sourcing limité</span></li>
-            <li><span>Production généraliste</span></li>
-            <li><span>Certifications basiques</span></li>
-            <li><span>Infrastructure vieillissante</span></li>
-            <li><span>Clients locaux ou régionaux</span></li>
+            <li><span>{{ $t('productKnowHow.standard.items[0]') }}</span></li>
+            <li><span>{{ $t('productKnowHow.standard.items[1]') }}</span></li>
+            <li><span>{{ $t('productKnowHow.standard.items[2]') }}</span></li>
+            <li><span>{{ $t('productKnowHow.standard.items[3]') }}</span></li>
+            <li><span>{{ $t('productKnowHow.standard.items[4]') }}</span></li>
+            <li><span>{{ $t('productKnowHow.standard.items[5]') }}</span></li>
+            <li><span>{{ $t('productKnowHow.standard.items[6]') }}</span></li>
           </ul>
           <!-- Badge Footer -->
           <div class="badge-footer">
             <div class="badge-content">
-              <span>LCT combine proximité méditerranéenne, expertise industrielle et vision européenne</span>
+              <span>{{ $t('productKnowHow.standard.badge') }}</span>
             </div>
           </div>
         </div>

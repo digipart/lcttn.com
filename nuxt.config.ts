@@ -51,17 +51,20 @@ export default defineNuxtConfig({
     }
   },
 
-  i18n: {
-    locales: ['en', 'fr'],
-    defaultLocale: 'fr',
-    strategy: 'prefix_except_default',
-    customRoutes: 'config',
-    pages: routesI18N,
-    // CRITICAL: Disable browser language detection
-    detectBrowserLanguage: false,
 
-    // Force French on root path
-    differentDomains: false,
+  i18n: {
+    strategy: 'prefix',
+    defaultLocale: 'fr',
+    langDir: './',
+    locales: [
+      { code: 'en', iso: 'en-US', file: 'en.js' },
+      { code: 'fr', iso: 'fr-FR', file: 'fr.js' }
+    ],
+    bundle: {
+      optimizeTranslationDirective: false
+    },
+
+    detectBrowserLanguage: false // Keep this false to prevent auto-redirects during build
   },
 
 })

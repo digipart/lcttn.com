@@ -1,4 +1,4 @@
-const en = {
+export default {
   "nav": {
     "home": "Home",
     "expertise": "Expertise",
@@ -246,7 +246,7 @@ const en = {
     },
     "email": {
       "label": "Email",
-      "value": "info@lcttn.com"
+      "value": "info{'@'}lcttn.com"
     },
     "brand": "LCT — Trusted partner for high-end ready-to-wear since 1995.",
     "formTitle": "Send us a message",
@@ -285,4 +285,3 @@ const en = {
   }
 };
 
-export default en;

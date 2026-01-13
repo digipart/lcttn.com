@@ -1,4 +1,4 @@
-const fr = {
+export default {
   "nav": {
     "home": "Accueil",
     "expertise": "Savoir-Faire",
@@ -25,7 +25,7 @@ const fr = {
     "title": "Notre Organisation Industrielle",
     "tunisia": {
       "title": "Tunisie – Hub Industriel",
-      "stats": "3 sites de production | 16 138 m² | 1350 collaborateurs qualifiés",
+      "stats": ["3 sites de production", "16 138 m²", "1350 collaborateurs qualifiés"],
       "items": [
         "1121 machines industrielles",
         "Capacité: 3,5M pièces/an",
@@ -35,7 +35,7 @@ const fr = {
     },
     "france": {
       "title": "France – Bureau Paris",
-      "stats": "Développement commercial | Suivi technique | Relation client",
+      "stats": ["Développement commercial", "Suivi technique", "Relation client"],
       "items": [
         "Showroom permanent",
         "Équipe commerciale dédiée",
@@ -45,7 +45,7 @@ const fr = {
     },
     "turkey": {
       "title": "Turquie – Bureau Istanbul",
-      "stats": "Sourcing matières | Optimisation supply chain",
+      "stats": ["Sourcing matières", "Optimisation supply chain"],
       "items": [
         "Accès aux meilleurs fournisseurs textiles",
         "Négociation des prix matières",
@@ -246,7 +246,7 @@ const fr = {
     },
     "email": {
       "label": "Email",
-      "value": "info@lcttn.com"
+      "value": "info{'@'}lcttn.com"
     },
     "brand": "LCT — Partenaire de confiance pour le prêt-à-porter haut de gamme depuis 1995.",
     "formTitle": "Envoyez-nous un message",
@@ -284,4 +284,4 @@ const fr = {
     "copyright": "Tous droits réservés."
   }
 };
-export default fr;
+

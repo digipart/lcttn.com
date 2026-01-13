@@ -4,7 +4,7 @@
       
       <!-- Section Header -->
       <div class="section-header">
-        <h2 class="section-title">Capacités <span class="title-italic">Industrielles</span></h2>
+        <h2 class="section-title">{{ $t('capacity.title') }} <span class="title-italic">{{ $t('capacity.titleItalic') }}</span></h2>
         <div class="title-underline"></div>
       </div>
       <div class="capacity-grid">
@@ -23,7 +23,7 @@
           
           <div class="experience-badge">
             <span class="badge-num">30+</span>
-            <span class="badge-text">Années d'Excellence</span>
+            <span class="badge-text">{{ $t('capacity.badge') }}</span>
           </div>
         </div>
         <!-- Right: Factories Details -->
@@ -54,21 +54,23 @@
 </template>
 <script setup lang="ts">
 import { computed } from 'vue';
+import { useI18n } from 'vue-i18n';
+const { t } = useI18n();
 const factories = [
   {
-    name: 'Usine 1',
-    year: 1995,
-    description: 'Spécialisée dans les produits structurés, notre première usine garantit robustesse et précision.',
+    name: t('capacity.factory1.name'),
+    year: t('capacity.factory1.year'),
+    description: t('capacity.factory1.description'),
   },
   {
-    name: 'Usine 2',
-    year: 2019,
-    description: 'Dédiée à la production flexible, cette usine s\'adapte rapidement aux demandes variées du marché.',
+    name: t('capacity.factory2.name'),
+    year: t('capacity.factory2.year'),
+    description: t('capacity.factory2.description'),
   },
   {
-    name: 'Usine 3',
-    year: 2022,
-    description: 'Notre usine la plus récente, optimisée pour la réactivité, assure des délais de livraison très courts.',
+    name: t('capacity.factory3.name'),
+    year: t('capacity.factory3.year'),
+    description: t('capacity.factory3.description'),
   },
 ];
 // Modern Black Vector Icons (SVG)

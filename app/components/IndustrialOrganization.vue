@@ -1,74 +1,83 @@
 <template>
   <section class="industrial-org-section">
-    <div class="container">
+    <!-- Creative Background Element -->
+    <div class="bg-decor-orb"></div>
+
+    <div class="container relative">
       <!-- Section Header -->
       <div class="section-header">
-        <h2 class="section-title">Notre Organisation Industrielle</h2>
+        <h2 class="section-title">{{ $t('organization.title') }}</h2>
         <div class="title-underline"></div>
       </div>
 
-      <!-- Organization Cards -->
       <div class="org-grid">
-        <!-- Tunisie - Hub Industriel -->
+        <!-- Tunisie Hub -->
         <div class="org-card">
+          <div class="card-status">Primary Hub</div>
           <div class="card-header">
-            <h3 class="card-title">Tunisie – Hub Industriel</h3>
+            <div class="icon-wrapper">
+              <Icon name="lucide:factory" class="org-icon" />
+            </div>
+            <h3 class="card-title">{{ $t('organization.tunisia.title') }}</h3>
           </div>
           
           <div class="card-stats">
-            <span class="stat-item">3 sites de production</span>
-            <span class="stat-divider">|</span>
-            <span class="stat-item">16 138 m²</span>
-            <span class="stat-divider">|</span>
-            <span class="stat-item">1350 collaborateurs qualifiés</span>
+            <span class="stat-pill">{{ $t('organization.tunisia.stats[0]') }}</span>
+            <span class="stat-pill">{{ $t('organization.tunisia.stats[1]') }}</span>
+            <span class="stat-pill">{{ $t('organization.tunisia.stats[2]') }}</span>
           </div>
 
           <ul class="feature-list">
-            <li>1121 machines industrielles</li>
-            <li>Capacité: 3,5M pièces/an</li>
-            <li>Spécialisation par usine (structuré / flexible / réactif)</li>
-            <li>Optimisation des coûts</li>
+            <li><Icon name="lucide:arrow-up-right" class="li-icon"/> {{ $t('organization.tunisia.items[0]') }}</li>
+            <li><Icon name="lucide:arrow-up-right" class="li-icon"/> {{ $t('organization.tunisia.items[1]') }}</li>
+            <li><Icon name="lucide:arrow-up-right" class="li-icon"/> {{ $t('organization.tunisia.items[2]') }}</li>
+            <li><Icon name="lucide:arrow-up-right" class="li-icon"/> {{ $t('organization.tunisia.items[3]') }}</li>
           </ul>
         </div>
 
-        <!-- France - Bureau Paris -->
-        <div class="org-card">
+        <!-- France Bureau -->
+        <div class="org-card highlighted">
+          <div class="card-status">Global Relations</div>
           <div class="card-header">
-            <h3 class="card-title">France – Bureau Paris</h3>
+            <div class="icon-wrapper">
+              <Icon name="lucide:map-pin" class="org-icon" />
+            </div>
+            <h3 class="card-title">{{ $t('organization.france.title') }}</h3>
           </div>
           
           <div class="card-stats">
-            <span class="stat-item">Développement commercial</span>
-            <span class="stat-divider">|</span>
-            <span class="stat-item">Suivi technique</span>
-            <span class="stat-divider">|</span>
-            <span class="stat-item">Relation client</span>
+            <span class="stat-pill">{{ $t('organization.france.stats[0]') }}</span>
+            <span class="stat-pill">{{ $t('organization.france.stats[1]') }}</span>
+            <span class="stat-pill">{{ $t('organization.france.stats[2]') }}</span>
           </div>
 
           <ul class="feature-list">
-            <li>Showroom permanent</li>
-            <li>Équipe commerciale dédiée</li>
-            <li>Suivi des collections en temps réel</li>
-            <li>Proximité avec les donneurs d'ordre</li>
+            <li><Icon name="lucide:arrow-up-right" class="li-icon"/> {{ $t('organization.france.items[0]') }}</li>
+            <li><Icon name="lucide:arrow-up-right" class="li-icon"/> {{ $t('organization.france.items[1]') }}</li>
+            <li><Icon name="lucide:arrow-up-right" class="li-icon"/> {{ $t('organization.france.items[2]') }}</li>
+            <li><Icon name="lucide:arrow-up-right" class="li-icon"/> {{ $t('organization.france.items[3]') }}</li>
           </ul>
         </div>
 
-        <!-- Turquie - Bureau Istanbul -->
+        <!-- Turquie Bureau -->
         <div class="org-card">
+          <div class="card-status">Sourcing & Supply</div>
           <div class="card-header">
-            <h3 class="card-title">Turquie – Bureau Istanbul</h3>
+            <div class="icon-wrapper">
+              <Icon name="lucide:box" class="org-icon" />
+            </div>
+            <h3 class="card-title">{{ $t('organization.turkey.title') }}</h3>
           </div>
           
           <div class="card-stats">
-            <span class="stat-item">Sourcing matières</span>
-            <span class="stat-divider">|</span>
-            <span class="stat-item">Optimisation supply chain</span>
+            <span class="stat-pill">{{ $t('organization.turkey.stats[0]') }}</span>
+            <span class="stat-pill">{{ $t('organization.turkey.stats[1]') }}</span>
           </div>
 
           <ul class="feature-list">
-            <li>Accès aux meilleurs fournisseurs textiles</li>
-            <li>Négociation des prix matières</li>
-            <li>Contrôle qualité des tissus</li>
+            <li><Icon name="lucide:arrow-up-right" class="li-icon"/> {{ $t('organization.turkey.items[0]') }}</li>
+            <li><Icon name="lucide:arrow-up-right" class="li-icon"/> {{ $t('organization.turkey.items[1]') }}</li>
+            <li><Icon name="lucide:arrow-up-right" class="li-icon"/> {{ $t('organization.turkey.items[2]') }}</li>
           </ul>
         </div>
       </div>
@@ -76,142 +85,154 @@
   </section>
 </template>
 
-<script setup lang="ts">
-// IndustrialOrganization component - Premium design
-</script>
-
 <style scoped>
 .industrial-org-section {
-  padding: 80px 0;
+  padding: 140px 0;
   background: #ffffff;
   position: relative;
+  overflow: hidden;
+}
+
+.bg-decor-orb {
+  position: absolute;
+  top: -10%;
+  right: -5%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(0,0,0,0.02) 0%, transparent 70%);
+  border-radius: 50%;
+  z-index: 0;
 }
 
 .container {
-  max-width: 1400px;
+  max-width: 1300px;
   margin: 0 auto;
-  padding: 0 60px;
+  padding: 0 24px;
 }
 
-/* Section Header */
+.relative { position: relative; z-index: 2; }
+
+/* Header */
 .section-header {
   text-align: center;
   margin-bottom: 100px;
 }
 
 .section-title {
-  font-family: 'scotch-display', serif;
-  font-size: clamp(2.5rem, 4vw, 4rem);
-  font-weight: 400;
+  font-size: clamp(2.2rem, 5vw, 3.2rem);
+  font-weight: 800;
   color: #1a1a1a;
-  letter-spacing: -0.02em;
-  margin-bottom: 30px;
-  line-height: 1.2;
+  margin-bottom: 20px;
+  letter-spacing: -0.04em;
 }
 
 .title-underline {
-  width: 60px;
-  height: 1px;
+  width: 50px;
+  height: 4px;
   background: #1a1a1a;
   margin: 0 auto;
 }
 
-/* Organization Grid */
+/* Grid */
 .org-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 60px;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 32px;
 }
 
-/* Organization Cards */
+/* Base Card Styling */
 .org-card {
-  background: #fafafa;
+  background: #ffffff;
   padding: 50px 40px;
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  border: 1px solid #e8e8e8;
+  border-radius: 32px;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
   position: relative;
+  display: flex;
+  flex-direction: column;
 }
 
-.org-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background: #1a1a1a;
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.org-card:hover::before {
-  transform: scaleX(1);
+.org-card.highlighted {
+  background: #fcfcfc;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.04);
 }
 
 .org-card:hover {
-  background: #ffffff;
+  transform: translateY(-12px);
   border-color: #1a1a1a;
-  transform: translateY(-8px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.1);
 }
 
-/* Card Header */
+/* Card Badge/Status */
+.card-status {
+  font-size: 0.65rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #bbb;
+  margin-bottom: 25px;
+}
+
+.org-card:hover .card-status {
+  color: #1a1a1a;
+}
+
+/* Header within Card */
 .card-header {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 20px;
   margin-bottom: 30px;
-  padding-bottom: 25px;
-  border-bottom: 1px solid #e0e0e0;
 }
 
-.card-flag {
-  font-size: 2rem;
-  opacity: 0.9;
-  transition: all 0.3s ease;
+.icon-wrapper {
+  width: 56px;
+  height: 56px;
+  background: #f7f7f7;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s ease;
 }
 
-.org-card:hover .card-flag {
-  opacity: 1;
-  transform: scale(1.1);
+.org-icon {
+  font-size: 24px;
+  color: #1a1a1a;
+}
+
+.org-card:hover .icon-wrapper {
+  background: #1a1a1a;
+  color: #fff;
+}
+
+.org-card:hover .org-icon {
+  color: #fff;
 }
 
 .card-title {
-  font-family: 'scotch-display', serif;
-  font-size: 1.5rem;
-  font-weight: 400;
+  font-size: 1.4rem;
+  font-weight: 700;
   color: #1a1a1a;
-  letter-spacing: -0.01em;
-  line-height: 1.3;
+  line-height: 1.2;
 }
 
-/* Card Stats */
+/* Stats Styling */
 .card-stats {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 0.75rem;
-  color: #666;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  margin-bottom: 35px;
-  line-height: 1.8;
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-  align-items: center;
+  margin-bottom: 35px;
 }
 
-.stat-item {
-  transition: color 0.3s ease;
-}
-
-.org-card:hover .stat-item {
-  color: #1a1a1a;
-}
-
-.stat-divider {
-  color: #d0d0d0;
-  margin: 0 4px;
+.stat-pill {
+  font-size: 0.8rem;
+  font-weight: 600;
+  background: #f0f0f0;
+  padding: 6px 14px;
+  border-radius: 100px;
+  color: #444;
+  white-space: nowrap;
 }
 
 /* Feature List */
@@ -219,116 +240,37 @@
   list-style: none;
   padding: 0;
   margin: 0;
-  display: flex;
-  flex-direction: column;
+  display: grid;
   gap: 16px;
+  margin-top: auto;
 }
 
 .feature-list li {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 0.9rem;
-  color: #4a4a4a;
-  line-height: 1.7;
-  padding-left: 20px;
-  position: relative;
-  transition: all 0.3s ease;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  color: #666;
 }
 
-.feature-list li::before {
-  content: '—';
-  position: absolute;
-  left: 0;
+.li-icon {
+  font-size: 16px;
   color: #1a1a1a;
-  font-weight: 300;
+  margin-top: 2px;
+  opacity: 0.4;
+  transition: opacity 0.3s;
 }
 
-.feature-list li:hover {
-  color: #1a1a1a;
-  transform: translateX(8px);
+.org-card:hover .li-icon {
+  opacity: 1;
 }
 
-/* Responsive Design */
-@media (max-width: 1200px) {
-  .container {
-    padding: 0 40px;
-  }
-
-  .org-grid {
-    gap: 40px;
-  }
-}
-
-@media (max-width: 968px) {
-  .industrial-org-section {
-    padding: 80px 0;
-  }
-
-  .container {
-    padding: 0 30px;
-  }
-
-  .section-header {
-    margin-bottom: 60px;
-  }
-
-  .org-grid {
-    grid-template-columns: 1fr;
-    gap: 50px;
-  }
-
-  .org-card {
-    padding: 40px 35px;
-  }
-}
-
-@media (max-width: 640px) {
-  .industrial-org-section {
-    padding: 60px 0;
-  }
-
-  .container {
-    padding: 0 24px;
-  }
-
-  .section-title {
-    font-size: 2rem;
-  }
-
-  .section-header {
-    margin-bottom: 50px;
-  }
-
-  .org-card {
-    padding: 35px 25px;
-  }
-
-  .card-header {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 12px;
-  }
-
-  .card-flag {
-    font-size: 1.75rem;
-  }
-
-  .card-title {
-    font-size: 1.25rem;
-  }
-
-  .card-stats {
-    font-size: 0.7rem;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 6px;
-  }
-
-  .stat-divider {
-    display: none;
-  }
-
-  .feature-list li {
-    font-size: 0.85rem;
-  }
+/* Responsive Extensions */
+@media (max-width: 768px) {
+  .industrial-org-section { padding: 100px 0; }
+  .org-grid { grid-template-columns: 1fr; }
+  .org-card { padding: 40px 30px; }
+  .section-title { font-size: 2.2rem; }
 }
 </style>

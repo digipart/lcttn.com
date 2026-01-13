@@ -4,8 +4,8 @@
       
       <!-- Section Header -->
       <div class="header-minimal">
-        <h2 class="title-main">Conformité & <span class="italic">Certifications</span></h2>
-        <p class="lead-text">LCT garantit une conformité totale aux standards internationaux.</p>
+        <h2 class="title-main">{{ $t('certifications.title') }} & <span class="italic">{{ $t('certifications.titleItalic') }}</span></h2>
+        <p class="lead-text">{{ $t('certifications.lead') }}</p>
       </div>
       <!-- Bento Grid for Certifications -->
       <div class="bento-grid">
@@ -14,35 +14,35 @@
         <div class="bento-item guarantee-island">
           <div class="island-content">
             <svg class="icon-big" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
-            <h3>Garantie de Conformité</h3>
-            <p>LCT garantit une conformité totale aux standards internationaux, avec des certifications reconnues et un engagement continu en matière de responsabilité sociale et environnementale.</p>
+            <h3>{{ $t('certifications.guarantee.title') }}</h3>
+            <p>{{ $t('certifications.guarantee.description') }}</p>
           </div>
         </div>
         <!-- Small Cert Cards -->
         <div class="bento-item cert-card">
-          <span class="cert-label">ICS & SMETA</span>
+          <span class="cert-label">{{ $t('certifications.ics.label') }}</span>
           <svg class="cert-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
-          <p>Conditions de travail éthiques.</p>
+          <p>{{ $t('certifications.ics.description') }}</p>
         </div>
         <div class="bento-item cert-card">
-          <span class="cert-label">ISO 28000</span>
+          <span class="cert-label">{{ $t('certifications.iso28000.label') }}</span>
           <svg class="cert-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-          <p>Sécurité de la chaîne logistique.</p>
+          <p>{{ $t('certifications.iso28000.description') }}</p>
         </div>
         <div class="bento-item cert-card">
-          <span class="cert-label">OCS & RCS</span>
+          <span class="cert-label">{{ $t('certifications.ocs.label') }}</span>
           <svg class="cert-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.5 21 2c-2 5-2.5 7.3-1.2 14 .5 2.7-1.8 5-4.5 4.3l-4.3-.3z"/></svg>
-          <p>Coton bio & Matériaux recyclés.</p>
+          <p>{{ $t('certifications.ocs.description') }}</p>
         </div>
         <div class="bento-item cert-card">
-          <span class="cert-label">Higg Index</span>
+          <span class="cert-label">{{ $t('certifications.higg.label') }}</span>
           <svg class="cert-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg>
-          <p>Évaluation environnementale.</p>
+          <p>{{ $t('certifications.higg.description') }}</p>
         </div>
       </div>
       <!-- Roadmap Path Section -->
       <div class="roadmap-path">
-        <h3 class="path-title">Feuille de Route</h3>
+        <!-- <h3 class="path-title">{{$t('certifications.roadmap.title')}}</h3> -->
         
         <div class="path-container">
           <div class="horizontal-line"></div>
@@ -50,20 +50,20 @@
           <div class="path-steps">
             <!-- Step 2026 -->
             <div class="path-step">
-              <div class="step-marker">2026</div>
+              <div class="step-marker">{{$t('certifications.roadmap.step1.year')}}</div>
               <div class="step-card">
-                <h4>ISO 45001</h4>
-                <p>Santé et sécurité au travail.</p>
-                <p>Installation d'une centrale solaire pour -70% d'empreinte carbone et obtention de la certification ISO 14001 (gestion environnementale). </p>
+                <h4>{{$t('certifications.roadmap.step1.title')}}</h4>
+                <p>{{$t('certifications.roadmap.step1.description1')}}</p>
+                <p>{{$t('certifications.roadmap.step1.description2')}}</p>
               </div>
             </div>
             <!-- Step 2026-2027 -->
             <div class="path-step">
-              <div class="step-marker accent">2026-27</div>
+              <div class="step-marker accent">{{$t('certifications.roadmap.step2.year')}}</div>
               <div class="step-card">
-                <h4>Solaire & ISO 14001</h4>
-                <p>-70% d'empreinte carbone.</p>
-                <p>Certification ISO 45001 (santé et sécurité au travail) pour renforcer notre engagement envers nos employés.</p>
+                <h4>{{$t('certifications.roadmap.step2.title')}}</h4>
+                <p>{{$t('certifications.roadmap.step2.description1')}}</p>
+                <p>{{$t('certifications.roadmap.step2.description2')}}</p>
               </div>
             </div>
           </div>
@@ -194,8 +194,6 @@
 }
 .path-container {
   position: relative;
-  margin-bottom: 80px;
-  padding-bottom: 40px;
 }
 .horizontal-line {
   position: absolute;
