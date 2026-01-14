@@ -6,7 +6,7 @@
     <IndustrialOrganization />
     <CompetitiveAdvantages />
     <ExpertiseSection />
-    <ProductKnowHow />
+    <Difference />
     <Products />
     <ValueChain /> 
     <ProductionCapacity />

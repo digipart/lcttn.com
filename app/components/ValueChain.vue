@@ -1,9 +1,9 @@
 <template>
-  <section class="valuechain-section">
+  <section class="valuechain-section" id="valueChain">
     <div class="container">
       <!-- Section Header -->
       <div class="section-header">
-        <h2 class="section-title">{{ $t('valueChain.title') }} <span class="title-titleItalic">{{ $t('valueChain.title') }}</span></h2>
+        <h2 class="section-title">{{ $t('valueChain.title') }} <span class="title-titleItalic">{{ $t('valueChain.titleItalic') }}</span></h2>
         <p class="section-description">{{ $t('valueChain.description') }}</p>
       </div>
       <!-- Process Flow -->
@@ -88,7 +88,7 @@ const stepsWithIcons = computed(() => {
 </script>
 <style scoped>
 .valuechain-section {
-  padding: 120px 0;
+  padding: 80px 0;
   background: #fafafa;
   position: relative;
   overflow: hidden;
@@ -119,6 +119,7 @@ const stepsWithIcons = computed(() => {
   font-size: 1.1rem;
   color: #666;
   letter-spacing: 0.5px;
+  text-align: center;
 }
 /* Process Flow */
 .process-wrapper {

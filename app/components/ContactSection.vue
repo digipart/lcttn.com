@@ -1,5 +1,5 @@
 <template>
-  <section class="contact-section">
+  <section class="contact-section" id="contact">
     <div class="container">
       
       <!-- Section Header -->
@@ -33,7 +33,7 @@
                 </div>
                 <div class="info-text">
                   <span class="label">Bureau Commercial</span>
-                  <p>+33 6 17 81 76 78</p>
+                  <a href="tel:+33617817678">+33 6 17 81 76 78</a>
                 </div>
               </div>
               <!-- Email -->
@@ -43,7 +43,7 @@
                 </div>
                 <div class="info-text">
                   <span class="label">Email</span>
-                  <p>info@lcttn.com</p>
+                  <a href="mailto:info@lcttn.com">info@lcttn.com</a>
                 </div>
               </div>
             </div>
@@ -180,7 +180,7 @@ const handleSubmit = async () => {
 
 <style scoped>
 .contact-section {
-  padding: 140px 0;
+  padding: 80px 0;
   background: #fafafa;
 }
 .container {

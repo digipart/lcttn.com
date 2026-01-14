@@ -1,12 +1,12 @@
 <template>
-  <section class="gallery-section">
+  <section class="gallery-section" id="know-how">
     <div class="container">
       
       <!-- Section Header -->
       <div class="gallery-header">
-        <h2 class="title-main">Notre Savoir-Faire <span class="italic">Produit</span></h2>
+        <h2 class="title-main">{{ $t('products.title') }} <span class="italic">{{ $t('products.titleHighlight') }}</span></h2>
         <p class="lead-text">
-          LCT maîtrise la confection d'articles chaîne et trame, du développement à la production industrielle, en collections saisonnières comme en réassorts rapides.
+          {{ $t('products.subtitle') }}
         </p>
       </div>
       <!-- Editorial Staggered Grid -->
@@ -17,49 +17,51 @@
             <img :src="product.image" :alt="product.name" class="product-image" />
             <div class="image-overlay"></div>
           </div>
-          <h3 class="product-name">{{ product.name }}</h3>
+          <h3 class="product-name">{{ $t(product.name) }}</h3>
         </div>
       </div>
       <!-- Footer Tags -->
       <div class="gallery-footer">
         <div class="tag-row">
-          <span>Collections Basiques & Mode</span>
+          <span>{{ $t('products.tags.basics') }}</span>
           <span class="dot"></span>
-          <span>Pièces Structurées</span>
+          <span>{{ $t('products.tags.structured') }}</span>
           <span class="dot"></span>
-          <span>Prêt-à-Porter Féminin</span>
+          <span>{{ $t('products.tags.womenswear') }}</span>
         </div>
-        <p class="production-note">Production en produit fini ou à façon</p>
+        <p class="production-note">{{ $t('products.note') }}</p>
       </div>
     </div>
   </section>
 </template>
 <script setup lang="ts">
 const products = [
-  { name: 'Robes', image: '/images/products/robes.jpg' },
-  { name: 'Vestes & Blazers', image: '/images/products/blazers.jpg' },
-  { name: 'Chemises & Blouses', image: '/images/products/blouses.jpg' },
-  { name: 'Pantalons', image: '/images/products/trousers.jpg' },
-  { name: 'Manteaux', image: '/images/products/coats.jpg' },
-  { name: 'Jupes plissées', image: '/images/products/skirts.jpg' },
-  { name: 'Combinaison', image: '/images/products/jumpsuits.jpg' },
-  { name: 'Divers produits', image: '/images/products/diverse.jpg' }
+  { name: 'products.categories.dresses', image: '/images/category/Robe.jpg' },
+  { name: 'products.categories.jackets', image: '/images/category/Vestes&Blazers.jpg' },
+  { name: 'products.categories.shirts', image: '/images/category/Chemises&Blouses.jpg' },
+  { name: 'products.categories.trousers', image: '/images/category/Pantalons.jpg' },
+  { name: 'products.categories.coats', image: '/images/category/Manteaux.jpg' },
+  { name: 'products.categories.skirts', image: '/images/category/Jupesplissees.jpg' },
+  { name: 'products.categories.jumpsuits', image: '/images/category/Combinaison.jpg' },
+  { name: 'products.categories.various', image: '/images/category/Diversproduits.jpg' }
 ]
 </script>
 <style scoped>
 .gallery-section {
-  padding: 120px 0;
+  padding: 80px 0;
   background: #ffffff;
 }
 .container {
-  max-width: 1400px;
+  max-width: 100vw;
   margin: 0 auto;
-  padding: 0 60px;
+  padding: 0 20px;
 }
 /* Header */
 .gallery-header {
   margin-bottom: 80px;
   max-width: 1000px;
+  margin: 0 auto 80px;
+  text-align: center;
 }
 .title-main {
   font-family: 'scotch-display', serif;
@@ -79,6 +81,7 @@ const products = [
   line-height: 1.7;
   color: #666;
   max-width: 800px;
+  margin: 0 auto;
 }
 /* Staggered Grid */
 .product-grid {
@@ -101,7 +104,7 @@ const products = [
   aspect-ratio: 3/4;
   overflow: hidden;
   background: #f7f7f7;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 .product-image {
   width: 100%;
@@ -134,6 +137,8 @@ const products = [
   font-weight: 400;
   color: #1a1a1a;
   letter-spacing: -0.01em;
+  text-align: center;
+  padding-bottom: 10px;
 }
 /* Footer Section */
 .gallery-footer {

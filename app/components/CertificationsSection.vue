@@ -1,5 +1,5 @@
 <template>
-  <section class="cert-bento-section">
+  <section class="cert-bento-section" id="certifications">
     <div class="container">
       
       <!-- Section Header -->
@@ -81,7 +81,7 @@
 </template>
 <style scoped>
 .cert-bento-section {
-  padding: 140px 0;
+  padding: 80px 0;
   background: #ffffff;
 }
 .container {

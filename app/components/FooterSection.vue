@@ -1,3 +1,16 @@
+<script setup lang="ts">
+const navLinks = [
+  { name: 'nav.organization', href: '#organization' },
+  { name: 'nav.advantages', href: '#advantages' },
+  { name: 'nav.expertise', href: '#expertise' },
+  { name: 'nav.difference', href: '#difference' },
+  { name: 'nav.know-how', href: '#know-how' },
+  { name: 'nav.capabilities', href: '#capabilities' },
+  { name: 'nav.certifications', href: '#certifications' },
+  { name: 'nav.whychooseus', href: '#why-choose-us' },
+]
+</script>
+
 <template>
   <footer class="footer-outer">
     <div class="container">
@@ -13,19 +26,18 @@
         <div class="footer-column">
           <h3 class="column-title">Navigation</h3>
           <ul class="footer-links">
-            <li><a href="#expertise">Expertise</a></li>
-            <li><a href="#production">Production</a></li>
-            <li><a href="#valeurs">Valeurs</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li v-for="(link, index) in navLinks" :key="index">
+              <a :href="link.href" class="nav-link">{{ $t(link.name) }}</a>
+            </li>
           </ul>
         </div>
         <!-- Contact Info Summary -->
         <div class="footer-column">
           <h3 class="column-title">Légal</h3>
           <ul class="footer-links">
-            <li><a href="#">Mentions Légales</a></li>
-            <li><a href="#">Confidentialité</a></li>
-            <li><a href="#">Cookies</a></li>
+            <li><NuxtLink to="/mentions-legales">Mentions Légales</NuxtLink></li>
+            <li><NuxtLink to="/politique-de-confidentialite">Confidentialité</NuxtLink></li>
+            <li><NuxtLink to="/cookies">Cookies</NuxtLink></li>
           </ul>
         </div>
         <!-- Language / Location -->
@@ -59,7 +71,7 @@
 .footer-outer {
   background: #000000;
   color: #ffffff;
-  padding: 100px 0 40px;
+  padding: 80px 0 40px;
 }
 .container {
   max-width: 1400px;

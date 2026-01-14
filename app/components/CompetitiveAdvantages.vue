@@ -1,5 +1,5 @@
 <template>
-  <section class="advantages-section">
+  <section class="advantages-section" id="advantages">
     <!-- Restored Background with Overlay -->
     <div class="background-overlay"></div>
     
@@ -64,7 +64,7 @@
 
 <style scoped>
 .advantages-section {
-  padding: 140px 0;
+  padding: 80px 0;
   background-image: url('/images/img_port.jpg'); /* Restore your background image */
   background-size: cover;
   background-position: center;

@@ -4,7 +4,7 @@
       <!-- Section Header -->
       <div class="section-header">
         <h2 class="section-title">
-          Ils nous <span class="title-italic">font confiance</span>
+          {{ $t('partners.title') }} <span class="title-italic">{{ $t('partners.titleItalic') }}</span>
         </h2>
         <div class="title-underline"></div>
       </div>
@@ -58,7 +58,8 @@ const logos = [
   margin: 0 auto;
   padding: 0 0px 0 0px;
   display: flex;
-  align-items: center;
+  align-items: stretch;
+
 }
 /* Section Header */
 .section-header {
@@ -67,6 +68,9 @@ const logos = [
   padding: 10px 0;
   width: 20%;
   background: #1a1a1a;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
 }
 .section-title {
   font-family: 'scotch-display', serif;
@@ -139,25 +143,32 @@ const logos = [
   color: #ffffff;
 }
 /* Responsive Design */
-@media (max-width: 768px) {
-  .partners-section {
-    padding: 70px 0;
-  }
+@media (max-width: 1024px) {
   .container {
-    padding: 0 30px;
+    flex-direction: column;
   }
-  .partners-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+  .section-header {
+    width: 100%;
+    padding: 30px 20px;
   }
-  
+  .section-title {
+    font-size: 1.5rem;
+    line-height: 1.3;
+  }
+  .marquee-track {
+    gap: 40px;
+    animation-duration: 25s;
+  }
   .partner-item {
-    max-width: 120px;
+    width: 110px;
   }
 }
 @media (max-width: 480px) {
   .section-title {
-    font-size: 1.75rem;
+    font-size: 1.3rem;
+  }
+  .partner-item {
+    width: 90px;
   }
 }
 
@@ -171,12 +182,13 @@ const logos = [
   display: flex;
   width: max-content;
   animation: marquee 35s linear infinite;
+  gap: 75px;
 }
 
 .partner-item {
   flex: 0 0 auto;
   width: 160px;
-  padding: 10px 35px;
+  padding: 0px 5px;
   filter: grayscale(100%);
   opacity: 0.5;
   transition: all 0.4s ease;

@@ -1,5 +1,5 @@
 <template>
-  <section class="why-bento-section">
+  <section class="why-bento-section" id="why-choose-us">
     <div class="container">
       
       <!-- Minimalist Centered Header -->

@@ -1,10 +1,15 @@
 export default {
   "nav": {
-    "home": "Home",
+    "home": "Accueil",
+    "organization": "Our Organization",
+    "advantages": "Advantages",
     "expertise": "Expertise",
-    "production": "Production",
-    "commitments": "Commitments",
-    "contact": "Contact"
+    "difference": "Our Difference",
+    "know-how": "Know-How",
+    "capabilities": "Capabilities",
+    "certifications": "Certifications",
+    "whychooseus": "Why Choose Us",
+    "contact": "Contact",
   },
   "hero": {
     "title": "Industrial Partner",
@@ -20,6 +25,27 @@ export default {
   "partners": {
     "title": "They",
     "titleItalic": "trust us"
+  },
+  "products": {
+    "title": "Our Product",
+    "titleHighlight": "Know-How",
+    "subtitle": "LCT masters the manufacturing of woven garments, from development to industrial production, in seasonal collections as well as fast reorders.",
+    "categories": {
+      "dresses": "Dresses",
+      "jackets": "Jackets & Blazers",
+      "shirts": "Shirts & Blouses",
+      "trousers": "Trousers",
+      "coats": "Coats",
+      "skirts": "Pleated skirts",
+      "jumpsuits": "Jumpsuits",
+      "various": "Various products"
+    },
+    "tags": {
+      "basics": "Basic & Fashion Collections",
+      "structured": "Structured Pieces",
+      "womenswear": "Women's Ready-to-Wear"
+    },
+    "note": "Production in finished product or subcontracting"
   },
   "organization": {
     "title": "Our Industrial Organization",
@@ -282,6 +308,61 @@ export default {
       "description": "Commercial Office"
     },
     "copyright": "All rights reserved."
+  },
+  "legal": {
+    "back": "Back to Home",
+    "mentions": {
+      "title": "Legal Notice",
+      "s1_title": "1. Site Presentation",
+      "s1_p1": "Under Article 6 of Law No. 2004-575 of June 21, 2004 on confidence in the digital economy, users of the site are informed of the identity of the various participants in its creation and monitoring:",
+      "s1_prop": "Owner:",
+      "s1_address": "Headquarters:",
+      "s1_resp": "Publication Manager:",
+      "s1_host": "Host:",
+      "s2_title": "2. General Conditions of Use of the Site and Services Offered",
+      "s2_p1": "Using the site implies full acceptance of the general conditions of use described below. These conditions of use may be modified or supplemented at any time; users are therefore invited to consult them regularly.",
+      "s3_title": "3. Description of Services Provided",
+      "s3_p1": "The site's purpose is to provide information regarding all company activities. LCT strives to provide information as accurate as possible on the site. However, it cannot be held responsible for omissions, inaccuracies, or deficiencies in updates, whether due to itself or third-party partners who provide this information.",
+      "s4_title": "4. Intellectual Property and Counterfeiting",
+      "s4_p1": "LCT is the owner of the intellectual property rights or holds the usage rights for all elements accessible on the site, including texts, images, graphics, logos, icons, sounds, and software.",
+      "s4_p2": "Any reproduction, representation, modification, publication, or adaptation of all or part of the site elements, regardless of the means or process used, is prohibited without prior written authorization from: LCT.",
+      "s5_title": "5. Limitations of Liability",
+      "s5_p1": "LCT cannot be held responsible for direct and indirect damage caused to the user's equipment when accessing the site."
+    },
+    "privacy": {
+      "title": "Privacy Policy",
+      "s1_title": "1. Information Collection",
+      "s1_p1": "We collect information when you contact us via our contact form. The information collected includes your name, email address, and phone number.",
+      "s2_title": "2. Use of Information",
+      "s2_p1": "All information we collect from you may be used to:",
+      "s2_li1": "Contact you by email or phone following your request.",
+      "s2_li2": "Improve our website.",
+      "s2_li3": "Improve customer service and your support needs.",
+      "s3_title": "3. Online Commerce Confidentiality",
+      "s3_p1": "We are the sole owners of the information collected on this site. Your personal information will not be sold, exchanged, transferred, or given to another company for any reason without your consent.",
+      "s4_title": "4. Disclosure to Third Parties",
+      "s4_p1": "We do not sell, trade, or transfer your personally identifiable information to third parties. This does not include trusted third parties who assist us in operating our website, so long as those parties agree to keep this information confidential.",
+      "s5_title": "5. Information Protection",
+      "s5_p1": "We implement a variety of security measures to maintain the safety of your personal information. We use state-of-the-art encryption to protect sensitive information transmitted online.",
+      "s6_title": "6. Consent",
+      "s6_p1": "By using our site, you consent to our privacy policy."
+    },
+    "cookies": {
+      "title": "Cookie Policy",
+      "s1_title": "1. What is a cookie?",
+      "s1_p1": "A cookie is a small text file placed on your computer, smartphone, or tablet when visiting a website. It allows the site to remember your actions and preferences over a given period.",
+      "s2_title": "2. Why do we use cookies?",
+      "s2_p1": "We use cookies to improve your experience on our site, including to:",
+      "s2_li1": "Understand how you use our site via analysis tools (e.g., Google Analytics).",
+      "s2_li2": "Improve the site's technical performance.",
+      "s2_li3": "Remember your choices (such as language).",
+      "s3_title": "3. What types of cookies do we use?",
+      "s3_p1": "Technical cookies: They are necessary for the proper functioning of the site.",
+      "s3_p2": "Performance cookies: They collect anonymous information about navigation.",
+      "s3_p3": "Functional cookies: They allow your choices to be remembered.",
+      "s4_title": "4. How to manage cookies?",
+      "s4_p1": "You can choose to disable cookies at any time by configuring your internet browser. Most browsers allow you to refuse or accept cookies."
+    }
   }
 };
 

@@ -1,5 +1,5 @@
 <template>
-  <section class="capacity-section">
+  <section class="capacity-section" id="capabilities">
     <div class="container">
       
       <!-- Section Header -->
@@ -91,7 +91,7 @@ const factoriesWithIcons = computed(() => {
 </script>
 <style scoped>
 .capacity-section {
-  padding: 140px 0;
+  padding: 80px 0;
   background: #ffffff;
   overflow: hidden;
 }

@@ -49,12 +49,12 @@
           </div>
           
           <div class="hero-cta">
-            <button class="btn-primary">
+            <a href="#expertise" class="btn-primary">
               {{ $t('hero.cta1') }}
-            </button>
-            <button class="btn-secondary">
+            </a>
+            <a href="#contact" class="btn-secondary">
               {{ $t('hero.cta2') }}
-            </button>
+            </a>
           </div>
         </div>
       </div>

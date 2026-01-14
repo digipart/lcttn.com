@@ -1,5 +1,5 @@
 <template>
-  <section class="expertise-section">
+  <section class="expertise-section" id="expertise">
     <!-- Background Decor -->
     <div class="expertise-bg-decor">
       <div class="circle circle-1"></div>
@@ -64,8 +64,8 @@
               </svg>
             </div>
             <div class="icon-wrapper"><Icon name="lucide:users" class="expertise-icon" /></div>
-            <h3 class="stat-title">{{ $t('expertise.expertise.title') }}</h3>
-            <p class="stat-description">{{ $t('expertise.expertise.description') }}</p>
+            <h3 class="stat-title">{{ $t('expertise.capacity.title') }}</h3>
+            <p class="stat-description">{{ $t('expertise.capacity.description') }}</p>
           </div>
           <!-- Card 3: Capacité (Textile Weave / Fabric Grid) -->
           <div class="expertise-card">
@@ -101,7 +101,7 @@
 
 <style scoped>
 .expertise-section {
-  padding: 120px 0;
+  padding: 80px 0;
   background: #ffffff;
   position: relative;
   overflow: hidden;

@@ -1,5 +1,5 @@
 <template>
-  <section class="industrial-org-section">
+  <section class="industrial-org-section" id="organization">
     <!-- Creative Background Element -->
     <div class="bg-decor-orb"></div>
 
@@ -87,7 +87,7 @@
 
 <style scoped>
 .industrial-org-section {
-  padding: 140px 0;
+  padding: 80px 0;
   background: #ffffff;
   position: relative;
   overflow: hidden;

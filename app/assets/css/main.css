@@ -6,7 +6,10 @@
   --font-title: 'scotch-display', serif;
   --font-body: 'Montserrat', sans-serif;
 }
-
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 70px;
+}
 body {
   font-family: var(--font-body);
 }
