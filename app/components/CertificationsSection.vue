@@ -273,8 +273,15 @@
   }
 }
 @media (max-width: 768px) {
+  .cert-bento-section {
+    padding: 40px 0;
+  }
+  .header-minimal {
+    margin-bottom: 40px;
+    text-align: center;
+  }
   .container {
-    padding: 0 30px;
+    padding: 0 20px;
   }
   .bento-grid {
     grid-template-columns: 1fr;
@@ -284,13 +291,13 @@
   }
   .path-steps {
     flex-direction: column;
-    gap: 50px;
+    gap: 40px;
   }
   .horizontal-line {
     display: none;
   }
   .roadmap-path {
-    padding: 40px 30px;
+    padding: 30px 20px;
   }
 }
 </style>

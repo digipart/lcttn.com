@@ -417,14 +417,24 @@ const handleSubmit = async () => {
   }
 }
 @media (max-width: 768px) {
+  .contact-section {
+    padding: 40px 0;
+  }
+  .section-header {
+    margin-bottom: 40px;
+    text-align: center;
+  }
+  .title-underline {
+    margin: 0 auto 20px;
+  }
+  .section-lead {
+    margin: 0 auto;
+  }
   .container {
-    padding: 0 24px;
+    padding: 0 20px;
   }
   .contact-form-wrapper {
-    padding: 40px 30px;
-  }
-  .contact-section {
-    padding: 80px 0;
+    padding: 40px 20px;
   }
 }
 </style>

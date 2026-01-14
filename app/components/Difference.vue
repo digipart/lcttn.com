@@ -194,16 +194,16 @@
     width: 100%;
   }
   .difference-section {
-    padding: 80px 0;
+    padding: 40px 0;
   }
 }
 @media (max-width: 640px) {
   .container {
-    padding: 0 24px;
+    padding: 0 20px;
   }
   
   .section-header {
-    margin-bottom: 60px;
+    margin-bottom: 40px;
   }
 }
 </style>

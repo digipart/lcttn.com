@@ -180,15 +180,22 @@
   }
 }
 @media (max-width: 768px) {
+  .why-bento-section {
+    padding: 40px 0;
+  }
+  .header-center {
+    margin-bottom: 40px;
+  }
   .container {
-    padding: 0 24px;
+    padding: 0 20px;
   }
   .bento-box {
-    padding: 40px 30px;
+    padding: 40px 20px;
   }
   .trust-bar {
     flex-wrap: wrap;
     gap: 20px;
+    margin-top: 40px;
   }
 }
 </style>

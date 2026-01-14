@@ -270,10 +270,13 @@ const factoriesWithIcons = computed(() => {
 }
 @media (max-width: 768px) {
   .capacity-section {
-    padding: 80px 0;
+    padding: 40px 0;
+  }
+  .section-header {
+    margin-bottom: 40px;
   }
   .container {
-    padding: 0 24px;
+    padding: 0 20px;
   }
   .image-collage {
     height: 400px;

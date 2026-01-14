@@ -268,9 +268,10 @@
 
 /* Responsive Extensions */
 @media (max-width: 768px) {
-  .industrial-org-section { padding: 100px 0; }
+  .industrial-org-section { padding: 40px 0; }
+  .section-header { margin-bottom: 40px; }
   .org-grid { grid-template-columns: 1fr; }
-  .org-card { padding: 40px 30px; }
-  .section-title { font-size: 2.2rem; }
+  .org-card { padding: 40px 20px; }
+  .section-title { font-size: 1.8rem; }
 }
 </style>

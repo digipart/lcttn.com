@@ -237,9 +237,10 @@
 }
 
 @media (max-width: 768px) {
-  .advantages-section { padding: 100px 0; }
+  .advantages-section { padding: 40px 0; }
+  .section-header { margin-bottom: 40px; }
   .advantages-grid { grid-template-columns: 1fr; }
-  .advantage-card { padding: 50px 30px; }
-  .section-title { font-size: 2.2rem; }
+  .advantage-card { padding: 40px 20px; }
+  .section-title { font-size: 1.8rem; }
 }
 </style>

@@ -306,8 +306,10 @@
 }
 
 @media (max-width: 640px) {
+  .expertise-section { padding: 40px 0; }
   .expertise-grid { grid-template-columns: 1fr; }
-  .section-header { margin-bottom: 50px; }
-  .section-title { font-size: 2.2rem; }
+  .section-header { margin-bottom: 40px; }
+  .section-title { font-size: 1.8rem; }
+  .expertise-visual-card { padding: 10px; }
 }
 </style>

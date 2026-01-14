@@ -190,8 +190,14 @@ const products = [
   }
 }
 @media (max-width: 768px) {
+  .gallery-section {
+    padding: 40px 0;
+  }
+  .gallery-header {
+    margin-bottom: 40px;
+  }
   .container {
-    padding: 0 30px;
+    padding: 0 20px;
   }
   .tag-row {
     flex-direction: column;

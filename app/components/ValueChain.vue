@@ -228,10 +228,14 @@ const stepsWithIcons = computed(() => {
 }
 @media (max-width: 768px) {
   .valuechain-section {
-    padding: 80px 0;
+    padding: 40px 0;
+  }
+  .section-header {
+    margin-bottom: 40px;
+    text-align: center;
   }
   .container {
-    padding: 0 30px;
+    padding: 0 20px;
   }
   .step-card {
     flex: 0 0 calc(50% - 40px);
