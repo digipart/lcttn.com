@@ -42,7 +42,7 @@ const products = [
   { name: 'products.categories.trousers', image: '/images/category/Pantalons.jpg' },
   { name: 'products.categories.coats', image: '/images/category/Manteaux.jpg' },
   { name: 'products.categories.skirts', image: '/images/category/Jupesplissees.jpg' },
-  { name: 'products.categories.jumpsuits', image: '/images/category/Combinaison.jpg' },
+  { name: 'products.categories.jumpsuits', image: '/images/category/combinaison.jpg' },
   { name: 'products.categories.various', image: '/images/category/Diversproduits.jpg' }
 ]
 </script>
