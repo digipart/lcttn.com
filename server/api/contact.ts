@@ -1,4 +1,4 @@
-import { defineEventHandler, readBody } from 'h3'
+import { defineEventHandler, readBody, createError } from 'h3'
 import nodemailer from 'nodemailer'
 
 export default defineEventHandler(async (event) => {
@@ -6,70 +6,67 @@ export default defineEventHandler(async (event) => {
 
   // Vérifier que c'est une requête POST
   if (event.node.req.method !== 'POST') {
-    console.log('Méthode non autorisée:', event.node.req.method)
-    return {
-      success: false,
-      message: 'Method not allowed'
-    }
+    return createError({
+      statusCode: 405,
+      statusMessage: 'Method Not Allowed'
+    })
   }
 
   try {
     const body = await readBody(event)
-    console.log('Corps de la requête reçu:', body)
-
     const { name, email, message } = body
 
     // Validation des champs
     if (!name || !email || !message) {
-      console.log('Validation échouée: champs manquants')
-      return {
-        success: false,
+      return createError({
+        statusCode: 400,
+        statusMessage: 'Bad Request',
         message: 'Tous les champs sont requis'
-      }
+      })
     }
 
-    // Validation de l'email
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
-    if (!emailRegex.test(email)) {
-      console.log('Validation échouée: email invalide', email)
-      return {
-        success: false,
-        message: 'Email invalide'
-      }
-    }
+    const config = useRuntimeConfig()
 
-    // Configuration du transporteur email
-    console.log('Tentative de configuration SMTP avec:', {
-      host: process.env.SMTP_HOST || 'smtp.gmail.com',
-      port: process.env.SMTP_PORT || '587',
-      user: process.env.SMTP_USER,
-      to: process.env.CONTACT_EMAIL || 'info@lcttn.com'
+    // Debug credentials presence
+    console.log('Credentials Check:', {
+      host: !!config.smtpHost,
+      port: !!config.smtpPort,
+      user: !!config.smtpUser,
+      pass: !!config.smtpPassword,
     })
 
+    if (!config.smtpUser || !config.smtpPassword) {
+      return createError({
+        statusCode: 500,
+        message: 'SMTP Config Error: Missing credentials (PLAIN) in runtimeConfig'
+      })
+    }
+
     const transporter = nodemailer.createTransport({
-      host: process.env.SMTP_HOST || 'smtp.gmail.com',
-      port: parseInt(process.env.SMTP_PORT || '587'),
-      secure: process.env.SMTP_PORT === '465',
+      host: config.smtpHost,
+      port: parseInt(config.smtpPort as string),
+      secure: config.smtpPort === '465',
       auth: {
-        user: process.env.SMTP_USER,
-        pass: process.env.SMTP_PASSWORD
+        user: config.smtpUser,
+        pass: config.smtpPassword
       }
     })
 
     // Vérifier la connexion SMTP
-    console.log('Vérification de la connexion SMTP...')
     try {
       await transporter.verify()
-      console.log('Connexion SMTP réussie !')
-    } catch (verifyError) {
-      console.error('Erreur de vérification SMTP:', verifyError)
-      throw new Error(`La configuration SMTP est incorrecte : ${verifyError.message}`)
+    } catch (verifyError: any) {
+      console.error('SMTP Verify Error:', verifyError)
+      return createError({
+        statusCode: 500,
+        message: `SMTP Config Error: ${verifyError.message || 'Unknown error'}`
+      })
     }
 
     // Contenu de l'email
     const mailOptions = {
-      from: `"${name}" <${process.env.SMTP_USER}>`,
-      to: process.env.CONTACT_EMAIL || 'info@lcttn.com',
+      from: `"${name}" <${config.smtpUser}>`,
+      to: config.contactEmail,
       replyTo: email,
       subject: `Nouveau message de contact - ${name}`,
       html: `
@@ -85,19 +82,17 @@ export default defineEventHandler(async (event) => {
     }
 
     // Envoi de l'email
-    console.log('Envoi de l\'email en cours...')
-    const info = await transporter.sendMail(mailOptions)
-    console.log('Email envoyé avec succès ! MessageID:', info.messageId)
+    await transporter.sendMail(mailOptions)
 
     return {
       success: true,
       message: 'Message envoyé avec succès'
     }
   } catch (error: any) {
-    console.error('ERREUR FINALE DANS LE HANDLER:', error)
-    return {
-      success: false,
-      message: error.message || 'Une erreur est survenue'
-    }
+    console.error('HANDLER ERROR:', error)
+    return createError({
+      statusCode: 500,
+      message: `Handler Error: ${error.message || 'Unknown error'}`
+    })
   }
 })

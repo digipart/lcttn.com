@@ -67,9 +67,17 @@ export default defineNuxtConfig({
     detectBrowserLanguage: false // Keep this false to prevent auto-redirects during build
   },
 
-  nitro: {
-    externals: {
-      inline: ['nodemailer']
+  runtimeConfig: {
+    // Private keys are only available on the server
+    smtpHost: process.env.SMTP_HOST,
+    smtpPort: process.env.SMTP_PORT,
+    smtpUser: process.env.SMTP_USER,
+    smtpPassword: process.env.SMTP_PASSWORD,
+    contactEmail: process.env.CONTACT_EMAIL,
+
+    // Public keys are also available on the client
+    public: {
+      // Add public keys if needed
     }
   }
 })
