@@ -363,6 +363,14 @@ export default {
       "s4_title": "4. How to manage cookies?",
       "s4_p1": "You can choose to disable cookies at any time by configuring your internet browser. Most browsers allow you to refuse or accept cookies."
     }
+  },
+  "thankYou": {
+    "title": "Thank You!",
+    "message": "Your message has been sent successfully.",
+    "details": "We have received your request and will get back to you as soon as possible.",
+    "backHome": "Back to Home",
+    "anotherMessage": "Send Another Message",
+    "contactLabel": "Need an urgent answer?"
   }
 };
 

@@ -67,4 +67,9 @@ export default defineNuxtConfig({
     detectBrowserLanguage: false // Keep this false to prevent auto-redirects during build
   },
 
+  nitro: {
+    externals: {
+      inline: ['nodemailer']
+    }
+  }
 })

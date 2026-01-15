@@ -10,6 +10,7 @@ const props = defineProps({
 })
 
 const { locale, locales } = useI18n()
+const switchLocalePath = useSwitchLocalePath()
 const isScrolled = ref(false)
 const isMobileMenuOpen = ref(false)
 
@@ -20,8 +21,8 @@ const handleScroll = () => {
   isScrolled.value = window.scrollY > threshold
 }
 
-const switchLanguage = (code: string) => {
-  locale.value = code
+// Mobile menu closing handler
+const closeMenu = () => {
   isMobileMenuOpen.value = false
 }
 
@@ -77,14 +78,14 @@ const navLinks = [
       <!-- Desktop Right (Lang + Action) -->
       <div class="navbar-actions">
         <div class="lang-switcher">
-          <button 
+          <NuxtLink 
             v-for="loc in locales" 
             :key="typeof loc === 'string' ? loc : loc.code"
-            @click="switchLanguage(typeof loc === 'string' ? loc : loc.code)"
+            :to="switchLocalePath(typeof loc === 'string' ? loc : loc.code)"
             :class="['lang-btn', { active: locale === (typeof loc === 'string' ? loc : loc.code) }]"
           >
             {{ (typeof loc === 'string' ? loc : loc.code).toUpperCase() }}
-          </button>
+          </NuxtLink>
         </div>
         
         <a href="#contact" class="btn-quote">
@@ -121,14 +122,15 @@ const navLinks = [
 
           <div class="drawer-footer-simple">
             <div class="drawer-lang-minimal">
-              <button 
+              <NuxtLink 
                 v-for="loc in locales" 
                 :key="typeof loc === 'string' ? loc : loc.code"
-                @click="switchLanguage(typeof loc === 'string' ? loc : loc.code)"
+                :to="switchLocalePath(typeof loc === 'string' ? loc : loc.code)"
+                @click="closeMenu"
                 :class="['lang-link-min', { active: locale === (typeof loc === 'string' ? loc : loc.code) }]"
               >
                 {{ (typeof loc === 'string' ? loc : loc.code).toUpperCase() }}
-              </button>
+              </NuxtLink>
             </div>
             <div class="drawer-legal-min">
               <NuxtLink to="/mentions-legales" @click="isMobileMenuOpen = false">{{ $t('footer.links.legal') }}</NuxtLink>
@@ -290,6 +292,7 @@ const navLinks = [
   cursor: pointer;
   border-radius: 8px;
   transition: all 0.3s ease;
+  text-decoration: none;
 }
 
 .lang-btn.active {
@@ -428,6 +431,7 @@ const navLinks = [
   cursor: pointer;
   padding: 0;
   transition: color 0.3s ease;
+  text-decoration: none;
 }
 
 .lang-link-min.active {

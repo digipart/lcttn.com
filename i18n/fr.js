@@ -363,6 +363,14 @@ export default {
       "s4_title": "4. Comment gérer les cookies ?",
       "s4_p1": "Vous pouvez à tout moment choisir de désactiver les cookies en configurant votre navigateur internet. La plupart des navigateurs vous permettent de refuser ou d'accepter les cookies."
     }
+  },
+  "thankYou": {
+    "title": "Merci !",
+    "message": "Votre message a été envoyé avec succès.",
+    "details": "Nous avons bien reçu votre demande et nous vous répondrons dans les plus brefs délais.",
+    "backHome": "Retour à l'accueil",
+    "anotherMessage": "Envoyer un autre message",
+    "contactLabel": "Besoin d'une réponse urgente ?"
   }
 };
 
