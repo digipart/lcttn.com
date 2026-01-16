@@ -12,11 +12,11 @@
         <div class="visual-side">
           <div class="image-collage">
             <div class="img-wrapper large">
-              <img src="/images/30ans.png" alt="Centre de Production LCT" />
+              <img src="/images/Capacites-1.png" alt="Centre de Production LCT" />
               <div class="img-overlay"></div>
             </div>
             <div class="img-wrapper floating">
-              <img src="/images/partners/fabric.png" alt="Détail Industriel" />
+              <img src="/images/Capacites-2.png" alt="Détail Industriel" />
               <div class="img-border"></div>
             </div>
           </div>
