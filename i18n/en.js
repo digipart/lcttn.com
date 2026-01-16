@@ -51,7 +51,7 @@ export default {
     "title": "Our Industrial Organization",
     "tunisia": {
       "title": "Tunisia – Industrial Hub",
-      "stats": "3 production sites | 16,138 m² | 1,350 qualified employees",
+      "stats": ["3 production sites", "16,138 m²", "1,350 qualified employees"],
       "items": [
         "1,121 industrial machines",
         "Capacity: 3.5M pieces/year",
@@ -61,7 +61,7 @@ export default {
     },
     "france": {
       "title": "France – Paris Office",
-      "stats": "Business development | Technical follow-up | Customer relations",
+      "stats": ["Business development", "Technical follow-up", "Customer relations"],
       "items": [
         "Permanent showroom",
         "Dedicated sales team",
@@ -71,7 +71,7 @@ export default {
     },
     "turkey": {
       "title": "Turkey – Istanbul Office",
-      "stats": "Material sourcing | Supply chain optimization",
+      "stats": ["Material sourcing", "Supply chain optimization"],
       "items": [
         "Access to best textile suppliers",
         "Material price negotiation",
@@ -83,15 +83,15 @@ export default {
     "title": "Competitive Advantages",
     "proximity": {
       "title": "Geographic proximity",
-      "description": "2 days sea transport | Simplified customs procedures | Logistics responsiveness"
+      "description": "2 days sea transport {'|'} Simplified customs procedures {'|'} Logistics responsiveness"
     },
     "workforce": {
       "title": "Qualified and experienced workforce",
-      "description": "Great availability of technical talent | Competitive costs | Recognized industrial expertise"
+      "description": "Great availability of technical talent {'|'} Competitive costs {'|'} Recognized industrial expertise"
     },
     "flexibility": {
       "title": "Industrial flexibility and scalability",
-      "description": "Adaptability to market needs | Robust infrastructure for growth | Custom solutions"
+      "description": "Adaptability to market needs {'|'} Robust infrastructure for growth {'|'} Custom solutions"
     }
   },
   "expertise": {
@@ -115,7 +115,7 @@ export default {
       "description": "Privileged collaborations with major European brands."
     }
   },
-  "productKnowHow": {
+  "difference": {
     "title": "Our",
     "titleItalic": "Competitive Difference",
     "lct": {

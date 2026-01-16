@@ -207,6 +207,7 @@ const handleSubmit = async () => {
   width: 50px;
   height: 1px;
   background: #1a1a1a;
+  margin: 0 auto;
   margin-bottom: 30px;
 }
 .section-lead {
@@ -278,6 +279,7 @@ const handleSubmit = async () => {
   padding: 80px 60px;
   border: 1px solid #f0f0f0;
   box-shadow: 0 40px 80px rgba(0,0,0,0.03);
+  margin-top: -150px;
 }
 .form-title {
   font-family: 'scotch-display', serif;
