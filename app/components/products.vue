@@ -41,9 +41,9 @@ const products = [
   { name: 'products.categories.shirts', image: '/images/category/Chemises&Blouses-n.png' },
   { name: 'products.categories.trousers', image: '/images/category/Pantalons-n.jpg' },
   { name: 'products.categories.coats', image: '/images/category/Manteaux-n.jpg' },
-  { name: 'products.categories.skirts', image: '/images/category/Jupesplissees-n.jpg' },
+  { name: 'products.categories.skirts', image: '/images/category/Jupesplissees-n.jpeg' },
   { name: 'products.categories.jumpsuits', image: '/images/category/combinaison-n.jpg' },
-  { name: 'products.categories.various', image: '/images/category/Diversproduits-nn.jpg' }
+  { name: 'products.categories.various', image: '/images/category/Diversproduits-n.jpeg' }
 ]
 </script>
 <style scoped>

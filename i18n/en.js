@@ -38,7 +38,7 @@ export default {
       "coats": "Coats",
       "skirts": "skirts",
       "jumpsuits": "Jumpsuits",
-      "various": "Various products"
+      "various": "Leather, Knit, Denim, ..."
     },
     "tags": {
       "basics": "Basic & Fashion Collections",

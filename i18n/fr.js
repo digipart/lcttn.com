@@ -38,7 +38,7 @@ export default {
       "coats": "Manteaux",
       "skirts": "Jupes",
       "jumpsuits": "Combinaison",
-      "various": "Divers produits"
+      "various": "Cuir, Maille, Denim,..."
     },
     "tags": {
       "basics": "Collections Basiques & Mode",
