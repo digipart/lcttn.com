@@ -24,7 +24,7 @@
         <!-- Left Column: Premium Image Card -->
         <div class="expertise-visual-card">
           <div class="image-inner">
-            <img src="/images/collection1.png" alt="Industrial Excellence" class="main-image">
+            <img src="/images/Expertise.jpg" alt="Industrial Excellence" class="main-image">
             <div class="image-overlay"></div>
             
           </div>
@@ -176,6 +176,7 @@
   object-fit: cover;
   display: block;
   transition: transform 0.6s ease;
+  object-position: top;
 }
 
 .expertise-visual-card:hover .main-image {

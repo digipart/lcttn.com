@@ -36,14 +36,14 @@
 </template>
 <script setup lang="ts">
 const products = [
-  { name: 'products.categories.dresses', image: '/images/category/Robe.jpg' },
-  { name: 'products.categories.jackets', image: '/images/category/Vestes&Blazers.jpg' },
+  { name: 'products.categories.dresses', image: '/images/category/Robe-n.jpg' },
+  { name: 'products.categories.jackets', image: '/images/category/Vestes&Blazers-n.jpg' },
   { name: 'products.categories.shirts', image: '/images/category/Chemises&Blouses.jpg' },
-  { name: 'products.categories.trousers', image: '/images/category/Pantalons.jpg' },
-  { name: 'products.categories.coats', image: '/images/category/Manteaux.jpg' },
+  { name: 'products.categories.trousers', image: '/images/category/Pantalons-n.jpg' },
+  { name: 'products.categories.coats', image: '/images/category/Manteaux-n.jpg' },
   { name: 'products.categories.skirts', image: '/images/category/Jupesplissees.jpg' },
-  { name: 'products.categories.jumpsuits', image: '/images/category/combinaison.jpg' },
-  { name: 'products.categories.various', image: '/images/category/Diversproduits.jpg' }
+  { name: 'products.categories.jumpsuits', image: '/images/category/combinaison-n.jpg' },
+  { name: 'products.categories.various', image: '/images/category/Diversproduits-n.jpg' }
 ]
 </script>
 <style scoped>
