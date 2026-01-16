@@ -36,7 +36,7 @@ export default {
       "shirts": "Shirts & Blouses",
       "trousers": "Trousers",
       "coats": "Coats",
-      "skirts": "Pleated skirts",
+      "skirts": "skirts",
       "jumpsuits": "Jumpsuits",
       "various": "Various products"
     },
