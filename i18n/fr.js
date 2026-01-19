@@ -95,24 +95,19 @@ export default {
     }
   },
   "expertise": {
-    "title": "LCT -",
-    "titleHighlight": "30 Ans d'Expertise Industrielle",
-    "description": "Depuis 1995, LCT s'impose comme un partenaire industriel de référence, alliant savoir-faire traditionnel et innovation technologique.",
-    "installations": {
-      "title": "Installations Industrielles",
-      "description": "Plus de 16 000 m² dédiés à la production."
+    "title": "Our",
+    "titleHighlight": "Expertise",
+    "creation": {
+      "title": "Creation",
+      "description": "Style, textile design, product development"
     },
-    "workforce": {
-      "title": "Expertise Humaine Qualifiée",
-      "description": "1 350 professionnels engagés dans l'excellence industrielle."
+    "production": {
+      "title": "Production",
+      "description": "High-end manufacturing, industrial flexibility"
     },
-    "capacity": {
-      "title": "Capacité de Production Annuelle Élevée",
-      "description": "Jusqu'à 3,5 millions de pièces produites chaque année."
-    },
-    "partners": {
-      "title": "Partenaire Stratégique des Leaders",
-      "description": "Collaborations privilégiées avec les grandes marques européennes."
+    "logistics": {
+      "title": "Logistics",
+      "description": "Europe delivery 2-3 days, optimized chain"
     }
   },
   "difference": {
@@ -233,28 +228,56 @@ export default {
     }
   },
   "whyChoose": {
-    "eyebrow": "Engagement & Excellence",
-    "title": "Pourquoi Nous",
-    "titleItalic": "Choisir",
-    "performance": {
-      "title": "Performance & Réactivité",
-      "items": [
-        "3 sites spécialisés — Multi-lignes",
-        "Éch. 2j — Production 3 semaines",
-        "Proximité Europe (Tunisie — 2-3j)",
-        "Bureau Paris — Suivi en temps réel",
-        "Flexibilité 5k à 500k pièces"
-      ]
+    "title": "Pourquoi FGPro ?",
+    "experience": {
+      "title": "30 ans",
+      "subtitle": "d'expérience",
+      "text": "Nous avons accompagné plus de 300 marques. Nous mettons à votre disposition notre expertise 360° en chaîne et trame, maille coupé cousu et maille tricot Premium."
     },
-    "reliability": {
-      "title": "Fiabilité & Expertise",
-      "items": [
-        "30 ans d'expérience (est. 1995)",
-        "Partner: Zara, Mango, Diesel...",
-        "Qualité certifiée >98% conformité",
-        "Certifications internationales complètes",
-        "R&D Durable & Green Innovation"
-      ]
+    "references": {
+      "title": "800 références",
+      "subtitle": "matières certifiées",
+      "text": "Nous avons conscience de la pollution engendrée par l'industrie de la mode et nous nous engageons sur la voie d'avenir de l'éco-responsabilité (certifications GOTS, OCS, RCS)."
+    },
+    "workshops": {
+      "title": "3 sites",
+      "subtitle": "de production",
+      "text": "Nous collaborons avec des usines et fournisseurs partenaires partout dans le monde. Ainsi, nous nous adaptons pour respecter vos contraintes de qualité, de budget et de délais."
+    },
+    "delivery": {
+      "title": "100% des productions",
+      "subtitle": "livrées à temps",
+      "text": "A l'heure où 50% à 60% des marques subissent un décalage dans leur lancement suite à un retard de livraison de production, nous nous engageons contractuellement à respecter le rétro planning élaboré ensemble."
+    },
+    "cta": "DÉCOUVRIR NOTRE AGENCE"
+  },
+  "realizations": {
+    "title": "Nos",
+    "titleItalic": "Réalisations",
+    "subtitle": "Un aperçu de notre savoir-faire en création et développement.",
+    "style": {
+      "title": "Style",
+      "description": "Création de collections tendances et innovantes."
+    },
+    "textile": {
+      "title": "Design Textile",
+      "description": "Sourcing et développement de matières exclusives."
+    },
+    "product": {
+      "title": "Développement Produit",
+      "description": "De l'idée à la mise au point industrielle."
+    },
+    "creation1": {
+      "title": "Collection Hiver",
+      "description": "Élégance et technicité pour le froid."
+    },
+    "creation2": {
+      "title": "Ligne Sportswear",
+      "description": "Performance et confort au quotidien."
+    },
+    "creation3": {
+      "title": "Haute Couture",
+      "description": "Détails minutieux et finitions main."
     }
   },
   "contact": {

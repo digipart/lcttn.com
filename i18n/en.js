@@ -95,24 +95,19 @@ export default {
     }
   },
   "expertise": {
-    "title": "LCT -",
-    "titleHighlight": "30 Years of Industrial Expertise",
-    "description": "Since 1995, LCT has established itself as a reference industrial partner, combining traditional know-how and technological innovation.",
-    "installations": {
-      "title": "Industrial Facilities",
-      "description": "More than 16,000 m² dedicated to production."
+    "title": "Our",
+    "titleHighlight": "Expertise",
+    "creation": {
+      "title": "Creation",
+      "description": "Style, textile design, product development"
     },
-    "workforce": {
-      "title": "Qualified Human Expertise",
-      "description": "1,350 professionals committed to industrial excellence."
+    "production": {
+      "title": "Production",
+      "description": "High-end manufacturing, industrial flexibility"
     },
-    "capacity": {
-      "title": "High Annual Production Capacity",
-      "description": "Up to 3.5 million pieces produced each year."
-    },
-    "partners": {
-      "title": "Strategic Partner of Leaders",
-      "description": "Privileged collaborations with major European brands."
+    "logistics": {
+      "title": "Logistics",
+      "description": "Europe delivery 2-3 days, optimized chain"
     }
   },
   "difference": {
@@ -233,28 +228,56 @@ export default {
     }
   },
   "whyChoose": {
-    "eyebrow": "Commitment & Excellence",
-    "title": "Why",
-    "titleItalic": "Choose Us",
-    "performance": {
-      "title": "Performance & Responsiveness",
-      "items": [
-        "3 specialized sites — Multi-lines",
-        "Samples 2d — Production 3 weeks",
-        "Europe proximity (Tunisia — 2-3d)",
-        "Paris office — Real-time follow-up",
-        "Flexibility 5k to 500k pieces"
-      ]
+    "title": "Why FGPro ?",
+    "experience": {
+      "title": "30 years",
+      "subtitle": "of experience",
+      "text": "We have accompanied over 300 brands. We provide our 360° expertise in woven, cut & sew knit, and premium knot wear."
     },
-    "reliability": {
-      "title": "Reliability & Expertise",
-      "items": [
-        "30 years of experience (est. 1995)",
-        "Partner: Zara, Mango, Diesel...",
-        "Certified quality >98% compliance",
-        "Complete international certifications",
-        "Sustainable R&D & Green Innovation"
-      ]
+    "references": {
+      "title": "800 references",
+      "subtitle": "certified materials",
+      "text": "We are aware of the pollution caused by the fashion industry and are committed to the future path of eco-responsibility (GOTS, OCS, RCS certifications)."
+    },
+    "workshops": {
+      "title": "3 sites",
+      "subtitle": "production sites",
+      "text": "We collaborate with partner factories and suppliers worldwide. Thus, we adapt to respect your quality, budget, and deadline constraints."
+    },
+    "delivery": {
+      "title": "100% of productions",
+      "subtitle": "delivered on time",
+      "text": "At a time when 50% to 60% of brands suffer a delay in their launch due to a production delivery delay, we contractually commit to respecting the schedule established together."
+    },
+    "cta": "DISCOVER OUR AGENCY"
+  },
+  "realizations": {
+    "title": "Our",
+    "titleItalic": "Realizations",
+    "subtitle": "A glimpse of our expertise in creation and development.",
+    "style": {
+      "title": "Style",
+      "description": "Creation of trendy and innovative collections."
+    },
+    "textile": {
+      "title": "Textile Design",
+      "description": "Sourcing and development of exclusive materials."
+    },
+    "product": {
+      "title": "Product Development",
+      "description": "From idea to industrial development."
+    },
+    "creation1": {
+      "title": "Winter Collection",
+      "description": "Elegance and technicality for the cold."
+    },
+    "creation2": {
+      "title": "Sportswear Line",
+      "description": "Performance and comfort for everyday life."
+    },
+    "creation3": {
+      "title": "Haute Couture",
+      "description": "Meticulous details and hand finishes."
     }
   },
   "contact": {

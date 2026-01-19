@@ -3,9 +3,11 @@
     <Navbar />
     <HeroSection />
     <PartnersSection />
+    <ExpertiseSection />
+    <WhyChoose />
+    <RealizationsSection />
     <IndustrialOrganization />
     <CompetitiveAdvantages />
-    <ExpertiseSection />
     <Difference />
     <Products />
     <ValueChain /> 

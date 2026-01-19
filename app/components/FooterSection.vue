@@ -18,7 +18,7 @@ const navLinks = [
       <div class="footer-grid">
         <!-- Brand & About -->
         <div class="footer-column brand-col">
-          <h2 class="footer-logo">LCT</h2>
+          <h2 class="footer-logo">FG<span class="logo-highlight">prod</span></h2>
           <p class="brand-description">La Confection Tunisienne — Partenaire industriel de référence depuis 1995, spécialisé dans le prêt-à-porter haut de gamme pour les leaders européens.</p>
           <div class="label-tag">Industrial Apparel Manufacturing</div>
         </div>
@@ -56,7 +56,7 @@ const navLinks = [
       <!-- Bottom Bar -->
       <div class="footer-bottom">
         <div class="copyright">
-          &copy; {{ new Date().getFullYear() }} LCT. Tous droits réservés.
+          &copy; {{ new Date().getFullYear() }} FGpro. Tous droits réservés.
         </div>
         <div class="social-links">
           <a href="#" aria-label="LinkedIn">LN</a>
@@ -88,8 +88,22 @@ const navLinks = [
 .footer-logo {
   font-family: 'scotch-display', serif;
   font-size: 2.5rem;
-  font-weight: 300;
+  font-weight: 700;
   margin-bottom: 30px;
+  letter-spacing: -1px;
+}
+
+.footer-logo .logo-highlight {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-left: 5px;
+  color: #fff;
+  opacity: 0.8;
+  transform: translateY(-4px);
+  display: inline-block;
 }
 .brand-description {
   font-family: 'Montserrat', sans-serif;

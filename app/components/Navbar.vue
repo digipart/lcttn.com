@@ -62,7 +62,7 @@ const navLinks = [
       <!-- Logo -->
       <div class="navbar-brand">
         <a href="/" class="logo">
-          <span class="logo-text">LCT</span>
+          <span class="logo-text">FG<span class="logo-highlight">prod</span></span>
         </a>
       </div>
 
@@ -104,7 +104,7 @@ const navLinks = [
       <Transition name="fade">
         <div v-if="isMobileMenuOpen" class="mobile-drawer">
           <div class="drawer-header">
-            <span class="logo-text">LCT</span>
+            <span class="logo-text">FG<span class="logo-highlight">pro</span></span>
             <button class="close-btn-simple" @click="isMobileMenuOpen = false">
                <Icon name="lucide:x" />
             </button>
@@ -210,19 +210,25 @@ const navLinks = [
 }
 
 .logo-text {
-  font-size: 1.8rem;
-  font-weight: 900;
+  font-family: 'scotch-display', serif;
+  font-size: 2rem;
+  font-weight: 700;
   color: #ffffff;
-  letter-spacing: -1px;
+  letter-spacing: -0.5px;
   transition: color 0.3s ease;
+  display: flex;
+  align-items: baseline;
 }
 
-.logo-dot {
-  width: 6px;
-  height: 6px;
-  background: #1a1a1a;
-  border-radius: 50%;
-  margin-top: 8px;
+.logo-highlight {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-left: 4px;
+  opacity: 0.9;
+  transform: translateY(-2px);
 }
 
 /* Desktop Menu */
