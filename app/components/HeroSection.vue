@@ -9,7 +9,7 @@
       playsinline
       preload="auto"
     >
-      <source src="/images/hero.mp4" type="video/mp4" />
+      <source src="/videos/hero-video.mp4" type="video/mp4" />
     </video>
     
     <!-- Image Background -->

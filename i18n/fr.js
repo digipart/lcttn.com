@@ -12,8 +12,8 @@ export default {
     "contact": "Contact",
   },
   "hero": {
-    "title": "Partenaire Industriel",
-    "titleHighlight": "de Référence",
+    "title": "Partenaire créatif et industriel",
+    "titleHighlight": "pour les marques de mode",
     "subtitle": "Confection textile haut et moyen gamme pour les marques européennes",
     "stat1": "Ans d'expertise",
     "stat2": "Pièces/an",
@@ -95,19 +95,19 @@ export default {
     }
   },
   "expertise": {
-    "title": "Our",
+    "title": "Notre",
     "titleHighlight": "Expertise",
     "creation": {
-      "title": "Creation",
-      "description": "Style, textile design, product development"
+      "title": "Création",
+      "description": "Style, design textile, développement produit"
     },
     "production": {
       "title": "Production",
-      "description": "High-end manufacturing, industrial flexibility"
+      "description": "Confection haut de gamme, flexibilité industrielle"
     },
     "logistics": {
-      "title": "Logistics",
-      "description": "Europe delivery 2-3 days, optimized chain"
+      "title": "Logistique",
+      "description": "Livraison en Europe en 2-3 jours, chaîne optimisée"
     }
   },
   "difference": {
@@ -228,7 +228,7 @@ export default {
     }
   },
   "whyChoose": {
-    "title": "Pourquoi FGPro ?",
+    "title": "Pourquoi FG.Prod ?",
     "experience": {
       "title": "30 ans",
       "subtitle": "d'expérience",

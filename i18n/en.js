@@ -228,7 +228,7 @@ export default {
     }
   },
   "whyChoose": {
-    "title": "Why FGPro ?",
+    "title": "Why FG.Prod ?",
     "experience": {
       "title": "30 years",
       "subtitle": "of experience",

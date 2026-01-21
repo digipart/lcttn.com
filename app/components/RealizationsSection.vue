@@ -35,7 +35,7 @@
           :class="item.class"
         >
           <!-- Image Item -->
-          <div v-if="!item.isVideo" class="image-wrapper">
+          <a v-if="!item.isVideo" :href="item.link" target="_blank" rel="noopener noreferrer" class="image-wrapper">
             <img :src="item.src" :alt="item.title" class="bg-image">
             <div class="overlay"></div>
             <div class="content">
@@ -43,10 +43,10 @@
               <h3 class="item-title">{{ item.title }}</h3>
               <p class="item-desc">{{ item.desc }}</p>
             </div>
-          </div>
+          </a>
 
           <!-- Video Item -->
-          <div v-else class="video-wrapper">
+          <a v-else :href="item.link" target="_blank" rel="noopener noreferrer" class="video-wrapper">
             <video autoplay muted loop playsinline class="bg-video">
               <source :src="item.src" type="video/mp4">
               Your browser does not support the video tag.
@@ -57,10 +57,10 @@
               <h3 class="item-title">{{ item.title }}</h3>
               <p class="item-desc">{{ item.desc }}</p>
               <div class="play-icon">
-                <svg viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M8 5v14l11-7z"/></svg>
+                <svg viewBox="0 00 24" fill="currentColor" stroke="none"><path d="M8 5v14l11-7z"/></svg>
               </div>
             </div>
-          </div>
+          </a>
         </div>
 
       </div>
@@ -82,7 +82,8 @@ const items = computed(() => [
     desc: t('realizations.style.description'),
     category: '01',
     class: 'style-item',
-    isVideo: false
+    isVideo: false,
+    link: 'https://readymag.website/u4065073057/4380582/iro/'
   },
   {
     src: '/images/Creation/image-2.jpg',
@@ -90,7 +91,8 @@ const items = computed(() => [
     desc: t('realizations.textile.description'),
     category: '02',
     class: 'textile-item',
-    isVideo: false
+    isVideo: false,
+    link: 'https://readymag.website/u4065073057/4380582/zapadesign/'
   },
   {
     src: '/images/hero.mp4',
@@ -98,7 +100,8 @@ const items = computed(() => [
     desc: t('realizations.product.description'),
     category: '03',
     class: 'product-item',
-    isVideo: true
+    isVideo: true,
+    link: 'https://readymag.website/u4065073057/4380582/zapadesign/'
   },
   {
     src: '/images/Creation/image-3.jpg',
@@ -106,7 +109,8 @@ const items = computed(() => [
     desc: t('realizations.creation1.description'),
     category: '04',
     class: 'creation-item',
-    isVideo: false
+    isVideo: false,
+    link: 'https://readymag.website/u4065073057/4380582/zapadesign/'
   },
   {
     src: '/images/Creation/image-4.jpg',
@@ -114,7 +118,8 @@ const items = computed(() => [
     desc: t('realizations.creation2.description'),
     category: '05',
     class: 'creation-item',
-    isVideo: false
+    isVideo: false,
+    link: 'https://readymag.website/u4065073057/4380582/zapadesign/'
   },
   {
     src: '/images/Creation/image-5.jpg',
@@ -122,7 +127,8 @@ const items = computed(() => [
     desc: t('realizations.creation3.description'),
     category: '06',
     class: 'creation-item',
-    isVideo: false
+    isVideo: false,
+    link: 'https://readymag.website/u4065073057/4380582/zapadesign/'
   }
 ])
 
@@ -261,6 +267,9 @@ const scroll = (direction: 'left' | 'right') => {
   width: 100%;
   height: 100%;
   position: relative;
+  display: block;
+  text-decoration: none;
+  color: inherit;
 }
 
 .bg-image, .bg-video {

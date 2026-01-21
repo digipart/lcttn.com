@@ -61,9 +61,7 @@ const navLinks = [
     <div class="container navbar-container">
       <!-- Logo -->
       <div class="navbar-brand">
-        <a href="/" class="logo">
-          <span class="logo-text">FG<span class="logo-highlight">prod</span></span>
-        </a>
+        <a href="/" class="logo" data-v-647b4179=""><span class="logo-text" data-v-647b4179="">FG.Prod</span></a>
       </div>
 
       <!-- Desktop Navigation -->
@@ -210,7 +208,7 @@ const navLinks = [
 }
 
 .logo-text {
-  font-family: 'scotch-display', serif;
+  /*font-family: 'scotch-display', serif;*/
   font-size: 2rem;
   font-weight: 700;
   color: #ffffff;
